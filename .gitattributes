@@ -1,0 +1,22 @@
+# Normalise to LF in the repo; Git checks out with native endings on Windows.
+* text=auto eol=lf
+
+# Explicit for the file types in this repo
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.md    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.json  text eol=lf
+*.proof text eol=lf
+*.hash  text eol=lf
+
+# Binary (none today, but keeps future screenshots/logos safe)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
