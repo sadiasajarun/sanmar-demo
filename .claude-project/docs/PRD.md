@@ -1,6 +1,6 @@
 # Sanmar Lead Intelligence & Sales CRM — Product Requirements Document
 
-**Version:** 1.1
+**Version:** 1.2
 **Date:** 2026-09-08
 **Status:** Draft — for client demo
 **Client:** Sanmar Properties Ltd (mysanmar.com)
@@ -675,7 +675,7 @@ sanmar-crm/                         ← proposed production build
 
 | Service | Purpose | Direction |
 |---------|---------|-----------|
-| **Call-intelligence provider** *(TBD — client to name)* | Call recording, transcription, summary, engagement and intent signals | **Inbound** webhook to us |
+| **Commplify** — Riseup Labs' own conversational-AI and voice platform | Call recording, transcription, summary, engagement and intent signals | **Inbound** webhook to us |
 | Transactional email (SES / SendGrid / Postmark) | Follow-up sequences, one-off agent emails, open and click tracking | Outbound |
 | Sanmar ERP *(TBD)* | Unit inventory, price bands, availability for business-fit scoring | Read |
 | Requirement #1/#2 voice platform | Call records from website click-to-call | Inbound |
@@ -736,7 +736,7 @@ The prototype must feel like Sanmar's own floor, not a generic CRM screenshot.
 
 | # | Question | Context / Impact | Owner | Status |
 |:-:|----------|-----------------|-------|--------|
-| 1 | Which call-intelligence product does Sanmar use or intend to buy? | Determines the real webhook contract, whether Bangla transcription quality is adequate, and whether intent scoring is provided or must be derived. The prototype assumes a generic signed webhook and shows the provider as **"VoiceIQ"**, a placeholder name to be swapped for the real vendor | Client | ⏳ Open |
+| 1 | ~~Which call-intelligence product does Sanmar use or intend to buy?~~ **Resolved — Commplify** | Determines the real webhook contract, whether Bangla transcription quality is adequate, and whether intent scoring is provided or must be derived. The prototype assumes a generic signed webhook and the provider is **Commplify**, Riseup Labs' own product, already in production on riseuplabs.com. The contract is therefore ours to define rather than a third party's to dictate | Riseup | ✅ Resolved |
 | 2 | What are Sanmar's **price bands** per project and unit type? | Project names, locations and unit mixes are now sourced from Sanmar's published material and used throughout the prototype. Prices are not published anywhere, and business-fit scoring is 45% of the composite, so real bands are still required | Client | 🟡 Partially resolved — names confirmed, prices outstanding |
 | 3 | Does an ERP or inventory system exist that can expose availability by API? | If not, price bands must be maintained manually in this platform, which adds an inventory-config screen | Client | ⏳ Open |
 | 4 | How many sales and tele-sales agents, and what is a realistic open-lead capacity per agent? | Drives routing defaults and the capacity ceilings shown on the Team page | Client | ⏳ Open |

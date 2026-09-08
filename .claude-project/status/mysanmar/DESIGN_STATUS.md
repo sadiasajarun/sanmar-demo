@@ -112,7 +112,7 @@ Violet (`--ai-600`) marks machine-generated content and nothing else.
 ## Known placeholders to resolve before the client meeting
 
 1. **Unit prices** — illustrative; Sanmar to supply real price bands per project and unit type (PRD open question #2)
-2. **Call-analysis provider** — shown as "VoiceIQ"; swap for whichever product Sanmar adopts (PRD open question #1)
+2. ~~Call-analysis provider~~ — **resolved**: Commplify, Riseup Labs' own product, already in production. Named throughout the prototype
 3. **Brand assets** — no Sanmar logo file was available, so the mark is a typographic "S" in the gradient. Drop in the real logo when supplied
 
 ## Handoff

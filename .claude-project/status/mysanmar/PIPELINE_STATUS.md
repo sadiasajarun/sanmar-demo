@@ -80,7 +80,7 @@ Roles: `manager` (Sales Manager / Admin, 7 pages) and `agent` (Sales Agent / Tel
 ## Open before the client meeting
 
 1. **Unit price bands** — Sanmar publishes "call for price"; figures are illustrative and marked as such on screen (PRD OQ#2)
-2. **Call-analysis vendor** — shown as "VoiceIQ" placeholder (PRD OQ#1)
+2. ~~Call-analysis vendor~~ — **resolved**: Commplify (Riseup Labs' own product)
 3. **Brand assets** — no logo file available; mark is a typographic "S" on the gradient
 
 ## Next
