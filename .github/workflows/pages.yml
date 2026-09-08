@@ -1,0 +1,65 @@
+name: Deploy prototype to GitHub Pages
+
+# The deliverable lives at .claude-project/design/html/, which "Deploy from a
+# branch" cannot serve — it only publishes / or /docs, and Jekyll skips
+# dot-prefixed directories. This workflow uploads that directory directly, so
+# the pipeline's canonical output path stays the single source of truth.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; always finish the newest.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Verify the prototype is intact
+        run: |
+          cd .claude-project/design/html
+          test -f index.html || { echo "::error::index.html missing"; exit 1; }
+          test -f signal.css || { echo "::error::signal.css missing"; exit 1; }
+          test -f app.js     || { echo "::error::app.js missing";     exit 1; }
+          m=$(ls manager/*.html | wc -l)
+          a=$(ls agent/*.html   | wc -l)
+          echo "manager pages: $m, agent pages: $a"
+          [ "$m" -eq 7 ] || { echo "::error::expected 7 manager pages, found $m"; exit 1; }
+          [ "$a" -eq 4 ] || { echo "::error::expected 4 agent pages, found $a";   exit 1; }
+          # every internal link must resolve, or the demo breaks in front of a client
+          broken=0
+          for f in $(find . -name '*.html'); do
+            d=$(dirname "$f")
+            for h in $(grep -oE 'href="[^"#]+\.html"' "$f" | sed 's/href="//;s/"$//'); do
+              [ -f "$d/$h" ] || { echo "::error::broken link in $f -> $h"; broken=$((broken+1)); }
+            done
+          done
+          [ "$broken" -eq 0 ] || exit 1
+          echo "all internal links resolve"
+
+      - name: Upload the prototype
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .claude-project/design/html
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
