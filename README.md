@@ -20,8 +20,8 @@ most of that volume is noise. This platform sits between the campaign and the sa
 
 Four decisions shape it:
 
-- **Call data arrives by signed webhook from [Commplify](https://riseuplabs.com)**, Riseup Labs' own
-  conversational-AI and voice platform — already in production. Items #1–#3 and #4–#5 are therefore one
+- **Call data arrives by signed webhook from Riseup Labs' own conversational-AI and voice platform**,
+  already in production. Items #1–#3 and #4–#5 are therefore one
   system from one vendor, not an integration between two. The payload contract is in the PRD.
 - **Scoring is hybrid and explainable** — AI conversation signals (45 pts) + business-fit rules (45)
   + behavioural (10), weights summing to a visible 100 that the *sales manager* edits, with a live
@@ -92,8 +92,8 @@ modals, and the scoring sliders recompute the total and the simulator live.
 1. **Unit price bands.** Sanmar publishes "call for price", so figures are modelled on prevailing
    Khulshi and Nasirabad per-sqft levels. Every screen showing a unit price says so. Replace with
    real bands — business fit is 45% of the score. *(PRD open question #2)*
-2. ~~Call-analysis vendor.~~ **Resolved** — Commplify, our own product. Demonstrated live rather than
-   by link.
+2. ~~Call-analysis vendor.~~ **Resolved** — our own conversational-AI and voice platform. Shown in a
+   live walkthrough rather than by link.
 3. **Brand assets.** No Sanmar logo file was available; the mark is a typographic "S" on the gradient.
 
 Project names, locations and unit mixes **are** real, sourced from Sanmar's published material:
