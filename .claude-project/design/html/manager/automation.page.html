@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Follow-up Automation — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">Pipeline</div>
+      <a href="dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7.5" height="8.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.5"/><rect x="3" y="14.5" width="7.5" height="6.5" rx="1.5"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.5"/></svg>Dashboard</a>
+      <a href="leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>All Leads<span class="count">1,284</span></a>
+      <a href="review-queue.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/><path d="M12 17V11"/></svg>Review Queue<span class="count">704</span></a>
+      <div class="nav-eyebrow">Intelligence</div>
+      <a href="scoring-rules.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>Scoring Rules</a>
+      <a href="campaigns.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 4 5-7 4 5"/><path d="M3 21h18"/></svg>Campaigns</a>
+      <div class="nav-eyebrow">Configuration</div>
+      <a class="on" href="automation.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 7H14a4 4 0 0 1 0 8h-2.5"/></svg>Automation</a>
+      <a href="team.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Team &amp; Routing</a>
+      <div class="nav-eyebrow">Agent view</div>
+      <a href="../agent/my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Agent portal</a>
+    </nav>
+    <div class="side-foot">
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Scoring rule set</span><span style="font-weight:700;color:var(--ink-700)">v7</span></div>
+      <div class="hint" style="margin-top:3px">Active since 24 Aug 2026</div>
+      <div class="who">
+        <div class="who-av">SR</div>
+        <div><div class="who-n">Shahriar Rahman</div><div class="who-r">Sales Manager</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">Follow-up Automation</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search leads…"></div>
+      <button type="button" class="btn sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Last 30 days<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="page-head">
+        <div class="t">
+          <h2>Follow-through without anyone remembering</h2>
+          <p>Rules read as sentences: when something happens, and certain conditions hold, do this. Nothing sends outside working hours, nobody gets more than one automated email in 48 hours, and every rule pauses on a lead the moment an agent logs a live conversation.</p>
+        </div>
+        <div class="acts">
+          <button type="button" class="btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Run log</button>
+          <button type="button" class="btn pri sm" data-toast="Use the rule builder on the right to define a new trigger, conditions and action"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>New rule</button>
+        </div>
+      </div>
+
+      <div class="g4 mb5">
+        <div class="kpi"><div><div class="eyebrow">Active rules</div><div class="kpi-v">7</div></div><span class="kpi-d flat">2 paused</span></div>
+        <div class="kpi"><div><div class="eyebrow">Actions this month</div><div class="kpi-v">1,842</div></div><span class="kpi-d flat">1,214 emails · 628 tasks created</span></div>
+        <div class="kpi"><div><div class="eyebrow">Email open rate</div><div class="kpi-v">41<small>%</small></div></div><span class="kpi-d up"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+5 pts vs Aug</span></div>
+        <div class="kpi"><div><div class="eyebrow">Held for working hours</div><div class="kpi-v">386</div></div><span class="kpi-d flat">Triggered after 20:00, released at 09:00</span></div>
+      </div>
+
+      <div class="split mb5">
+        <section class="card">
+          <div class="card-h">
+            <h2>Rules</h2>
+            <div class="spacer"></div>
+            <div class="filters" data-filter-group="rules">
+              <button type="button" class="fchip on" data-filter="*">All<span class="n">9</span></button>
+              <button type="button" class="fchip" data-filter="active">Active<span class="n">7</span></button>
+              <button type="button" class="fchip" data-filter="paused">Paused<span class="n">2</span></button>
+            </div>
+          </div>
+
+          <div class="rule" data-filter-item="rules" data-tags="active">
+            <div class="rule-t">
+              <b>Hot lead — alert the manager</b>
+              <p>When a lead becomes <span class="tag trg">Qualified</span> and <span class="tag cnd">band is Hot</span> and <span class="tag cnd">no contact within 2 hours</span> → <span class="tag act">notify manager</span> <span class="tag act">raise priority</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">148</div><div class="hint">runs / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Hot lead alert rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+
+          <div class="rule" data-filter-item="rules" data-tags="active">
+            <div class="rule-t">
+              <b>Warm — no contact 5 days</b>
+              <p>When <span class="tag trg">no contact for 5 days</span> and <span class="tag cnd">band is Warm</span> and <span class="tag cnd">stage is Contacted or Qualified</span> → <span class="tag act">send nurture sequence step</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">412</div><div class="hint">runs / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Warm no contact rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+
+          <div class="rule" data-filter-item="rules" data-tags="active">
+            <div class="rule-t">
+              <b>Nurture band — long sequence</b>
+              <p>When a lead is scored <span class="tag trg">Nurture</span> → <span class="tag act">enrol in "Slow burn" sequence</span> <span class="tag act">no agent assignment</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">268</div><div class="hint">runs / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Nurture band rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+
+          <div class="rule" data-filter-item="rules" data-tags="active">
+            <div class="rule-t">
+              <b>Site visit reminder</b>
+              <p>When <span class="tag trg">a site visit is 48 hours away</span> → <span class="tag act">send reminder with directions</span> <span class="tag act">create agent confirmation task</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">96</div><div class="hint">runs / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Site visit reminder rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+
+          <div class="rule" data-filter-item="rules" data-tags="active">
+            <div class="rule-t">
+              <b>Post-visit follow-up</b>
+              <p>When <span class="tag trg">stage becomes Site Visit Done</span> → <span class="tag act">create call task same day</span> <span class="tag act">send unit specification pack</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">91</div><div class="hint">runs / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Post-visit follow-up rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+
+          <div class="rule" data-filter-item="rules" data-tags="active">
+            <div class="rule-t">
+              <b>No answer — retry ladder</b>
+              <p>When <span class="tag trg">call outcome is No answer</span> and <span class="tag cnd">fewer than 3 attempts</span> → <span class="tag act">create retry task in 4 hours</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">341</div><div class="hint">runs / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="No answer retry rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+
+          <div class="rule" data-filter-item="rules" data-tags="active">
+            <div class="rule-t">
+              <b>Score dropped out of band</b>
+              <p>When <span class="tag trg">score band falls</span> and <span class="tag cnd">was Hot or Warm</span> → <span class="tag act">notify assigned agent</span> <span class="tag act">pause nurture emails</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">28</div><div class="hint">runs / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Score drop rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+
+          <div class="rule" style="opacity:.62" data-filter-item="rules" data-tags="paused">
+            <div class="rule-t">
+              <b>Weekend billboard blast</b>
+              <p>When <span class="tag trg">lead source is Billboard</span> and <span class="tag cnd">day is Friday</span> → <span class="tag act">send weekend open-house invite</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">0</div><div class="hint">paused 21 Aug</div></div>
+            <span class="toggle" role="switch" aria-checked="false" aria-label="Weekend billboard rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+
+          <div class="rule" style="opacity:.62" data-filter-item="rules" data-tags="paused">
+            <div class="rule-t">
+              <b>Anniversary check-in</b>
+              <p>When <span class="tag trg">lead is 12 months old</span> and <span class="tag cnd">stage is Lost</span> → <span class="tag act">send re-engagement email</span></p>
+            </div>
+            <div style="text-align:right;min-width:90px"><div class="num" style="font-weight:700">0</div><div class="hint">not yet live</div></div>
+            <span class="toggle" role="switch" aria-checked="false" aria-label="Anniversary check-in rule" tabindex="0"><i></i></span>
+            <button type="button" class="btn xs">Edit</button>
+          </div>
+        </section>
+
+        <div class="stack">
+          <section class="card">
+            <div class="card-h"><h2>Rule builder</h2><div class="spacer"></div><span class="chip">Editing · Warm — no contact 5 days</span></div>
+            <div class="card-b">
+              <div class="eyebrow" style="margin-bottom:9px">When</div>
+              <label class="field" style="margin-bottom:var(--sp-4)">
+                <span class="sr">Trigger</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+                <select>
+                  <option>No contact for N days</option>
+                  <option>Lead becomes Qualified</option>
+                  <option>Score band changes</option>
+                  <option>Stage changes</option>
+                  <option>Email opened</option>
+                  <option>Site visit completed</option>
+                  <option>Call outcome is No answer</option>
+                </select>
+              </label>
+
+              <div class="eyebrow" style="margin-bottom:9px">And all of these are true</div>
+              <div style="display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:var(--sp-3)">
+                <label class="field"><span class="sr">Condition one</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 20V9M10 20V4M16 20v-7"/></svg><select><option>Score band is Warm</option><option>Score band is Hot</option><option>Score band is Nurture</option></select></label>
+                <label class="field"><span class="sr">Condition two</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 12h11M11 7l5 5-5 5"/></svg><select><option>Stage is Contacted or Qualified</option><option>Stage is New</option><option>Stage is Negotiation</option></select></label>
+              </div>
+              <button type="button" class="btn xs"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>Add condition</button>
+
+              <div class="eyebrow" style="margin:var(--sp-5) 0 9px">Then do</div>
+              <div style="display:flex;flex-direction:column;gap:var(--sp-2)">
+                <label class="field"><span class="sr">Action</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg><select><option>Send next step of a sequence</option><option>Send a single template</option><option>Create an agent task</option><option>Notify the manager</option><option>Raise priority</option><option>Re-route the lead</option></select></label>
+                <label class="field"><span class="sr">Sequence</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 6h16M4 12h16M4 18h10"/></svg><select><option>Warm nurture — Orchard Garden</option><option>Slow burn — general portfolio</option><option>Post-visit pack</option></select></label>
+              </div>
+
+              <div style="margin-top:var(--sp-5);padding:var(--sp-4);background:var(--ai-050);border:1px solid var(--ai-100);border-radius:var(--r-md);font-size:13.2px;line-height:1.65">
+                <b style="font-family:var(--font-display);color:var(--ai-700)">Reads as:</b>
+                When a lead has had <b>no contact for 5 days</b>, and its <b>band is Warm</b>, and its
+                <b>stage is Contacted or Qualified</b>, send the next step of the
+                <b>Warm nurture — Orchard Garden</b> sequence.
+              </div>
+
+              <div style="margin-top:var(--sp-4);padding:var(--sp-3) var(--sp-4);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);font-size:13px;display:flex;gap:9px;align-items:center;flex-wrap:wrap">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--ink-500)" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg>
+                <span>This rule would have fired on <b>67 leads</b> last week.</span>
+                <button type="button" class="btn xs" data-toast="Simulated — this rule would have fired on 67 leads last week">Simulate</button>
+              </div>
+
+              <div style="display:flex;gap:8px;margin-top:var(--sp-5);flex-wrap:wrap">
+                <button type="button" class="btn pri" data-toast="Rule saved and enabled">Save rule</button>
+                <button type="button" class="btn">Cancel</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-h"><h2>Global settings</h2></div>
+            <div class="rule">
+              <div class="rule-t"><b>Working hours</b><p>Actions triggered outside this window are queued, never dropped</p></div>
+              <span class="wnum">09:00 – 20:00</span>
+            </div>
+            <div class="rule">
+              <div class="rule-t"><b>Time zone</b><p>Drives SLA clocks and release times</p></div>
+              <span class="wnum">Asia/Dhaka</span>
+            </div>
+            <div class="rule">
+              <div class="rule-t"><b>Maximum automated emails</b><p>Per lead, rolling window</p></div>
+              <span class="wnum">1 / 48h</span>
+            </div>
+            <div class="rule">
+              <div class="rule-t"><b>Pause on live human contact</b><p>All automation stops on a lead once an agent logs a conversation</p></div>
+              <span class="toggle on" role="switch" aria-checked="true" aria-label="Pause on human contact" tabindex="0"><i></i></span>
+            </div>
+            <div class="rule">
+              <div class="rule-t"><b>Public holidays</b><p>Queue actions on Bangladesh public holidays</p></div>
+              <span class="toggle on" role="switch" aria-checked="true" aria-label="Public holiday queueing" tabindex="0"><i></i></span>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="split mb5">
+        <section class="card">
+          <div class="card-h"><h2>Sequence · Warm nurture — Orchard Garden</h2><div class="spacer"></div><span class="chip hot">412 enrolled</span></div>
+          <div class="seq">
+            <div class="seq-step">
+              <div class="seq-n">Day<br>0</div>
+              <div class="seq-b">
+                <b>Orchard Garden 3BR overview</b>
+                <p>Project brochure, location map, 2/3/4-bed layouts. Merge fields: lead name, preferred area, agent direct line.</p>
+                <div style="display:flex;gap:6px;margin-top:9px;flex-wrap:wrap"><span class="chip">Open 47%</span><span class="chip">Click 18%</span></div>
+              </div>
+            </div>
+            <div class="seq-step">
+              <div class="seq-n">Day<br>3</div>
+              <div class="seq-b">
+                <b>Inside the B tower — walkthrough video</b>
+                <p>Two-minute unit walkthrough plus the amenity list — pool, gym, lawn, semi-basement parking.</p>
+                <div style="display:flex;gap:6px;margin-top:9px;flex-wrap:wrap"><span class="chip">Open 39%</span><span class="chip">Click 22%</span></div>
+              </div>
+            </div>
+            <div class="seq-step">
+              <div class="seq-n">Day<br>10</div>
+              <div class="seq-b">
+                <b>Payment schedule and bank tie-ups</b>
+                <p>Instalment structure and the list of partner banks for home-loan pre-approval.</p>
+                <div style="display:flex;gap:6px;margin-top:9px;flex-wrap:wrap"><span class="chip">Open 34%</span><span class="chip">Click 11%</span></div>
+              </div>
+            </div>
+            <div class="seq-step">
+              <div class="seq-n">Day<br>21</div>
+              <div class="seq-b">
+                <b>Still looking? — soft check-in</b>
+                <p>Short plain-text note from the assigned agent. Exit condition: any reply, or a booked site visit.</p>
+                <div style="display:flex;gap:6px;margin-top:9px;flex-wrap:wrap"><span class="chip">Open 28%</span><span class="chip">Reply 6%</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="tbl-foot">
+            <span class="hint">Sequence exits on reply, booked site visit, or the lead dropping out of the Warm band.</span>
+            <button type="button" class="btn sm">Add step</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Template library</h2><div class="spacer"></div><button type="button" class="btn sm">New template</button></div>
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th>Template</th><th>Used by</th><th class="r">Sent 30d</th><th class="r">Open</th><th></th></tr></thead>
+              <tbody>
+                <tr><td class="nm">Orchard Garden 3BR overview<span class="sub">Subject: "Your 3-bed options in West Khulshi"</span></td><td>2 rules</td><td class="r">412</td><td class="r">47%</td><td><button type="button" class="btn xs">Edit</button></td></tr>
+                <tr><td class="nm">Inside the B tower — walkthrough<span class="sub">Subject: "A two-minute look inside Orchard Garden"</span></td><td>1 sequence</td><td class="r">288</td><td class="r">39%</td><td><button type="button" class="btn xs">Edit</button></td></tr>
+                <tr><td class="nm">Payment schedule and bank tie-ups<span class="sub">Subject: "How buyers are financing at Orchard Garden"</span></td><td>1 sequence</td><td class="r">201</td><td class="r">34%</td><td><button type="button" class="btn xs">Edit</button></td></tr>
+                <tr><td class="nm">Site visit reminder<span class="sub">Subject: "Your visit on {{visit_date}} — directions inside"</span></td><td>1 rule</td><td class="r">96</td><td class="r">72%</td><td><button type="button" class="btn xs">Edit</button></td></tr>
+                <tr><td class="nm">Post-visit specification pack<span class="sub">Subject: "The unit you saw — full specification"</span></td><td>1 rule</td><td class="r">91</td><td class="r">58%</td><td><button type="button" class="btn xs">Edit</button></td></tr>
+                <tr><td class="nm">Slow burn — general portfolio<span class="sub">Subject: "Sanmar homes across Chattogram"</span></td><td>1 sequence</td><td class="r">268</td><td class="r">22%</td><td><button type="button" class="btn xs">Edit</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tbl-foot"><span class="hint">Merge fields available: lead name, preferred area, budget range, matched unit, agent name, agent direct line, visit date.</span></div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="card-h">
+          <h2>Run log</h2>
+          <div class="spacer"></div>
+          <div class="filters">
+            <button type="button" class="fchip on">All</button>
+            <button type="button" class="fchip">Succeeded</button>
+            <button type="button" class="fchip">Queued</button>
+            <button type="button" class="fchip">Failed<span class="n">1</span></button>
+          </div>
+        </div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead><tr><th>When</th><th>Rule</th><th>Lead</th><th>Action</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td>Today 09:15</td><td>Warm — no contact 5 days</td><td class="nm">34 leads</td><td>Sent nurture step (batch)</td><td><span class="chip hot">Released from overnight queue</span></td></tr>
+              <tr><td>Today 09:02</td><td>Site visit reminder</td><td class="nm">Rehana Begum</td><td>Sent reminder + created task</td><td><span class="chip hot">Delivered</span></td></tr>
+              <tr><td>Today 08:31</td><td>Hot lead — alert the manager</td><td class="nm">Md. Rafiqul Islam</td><td>Notified Shahriar Rahman</td><td><span class="chip hot">Delivered</span></td></tr>
+              <tr><td>Today 08:04</td><td>No answer — retry ladder</td><td class="nm">Ayesha Siddika</td><td>Created retry task for 12:00</td><td><span class="chip hot">Task created</span></td></tr>
+              <tr><td>Yesterday 20:11</td><td>Warm — no contact 5 days</td><td class="nm">Mizanur Rahman</td><td>Send nurture step 3</td><td><span class="chip warm">Queued to 09:15 — outside working hours</span></td></tr>
+              <tr><td>Yesterday 17:48</td><td>Post-visit follow-up</td><td class="nm">Nasrin Sultana</td><td>Sent specification pack</td><td><span class="chip hot">Delivered · opened</span></td></tr>
+              <tr><td>Yesterday 16:20</td><td>Warm — no contact 5 days</td><td class="nm">Kazi Delwar</td><td>Send nurture step 2</td><td><span class="chip dang">Failed after 3 retries — invalid address</span></td></tr>
+              <tr><td>Yesterday 14:05</td><td>Score dropped out of band</td><td class="nm">Mizanur Rahman</td><td>Notified Farhana Akter, paused emails</td><td><span class="chip hot">Delivered</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl-foot">
+          <span>Showing 8 of 1,842 automation runs this month</span>
+          <span class="chip dang">1 failure needs a human — invalid email on Kazi Delwar</span>
+          <div class="pager">
+            <button type="button" aria-label="Previous page">‹</button>
+            <button type="button" class="on">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button" aria-label="Next page">›</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>

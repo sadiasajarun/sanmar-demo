@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Follow-ups &amp; Tasks — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">My work</div>
+      <a href="my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h12"/></svg>My Leads<span class="count">12</span></a>
+      <a href="call-log.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Call Log</a>
+      <a class="on" href="followups.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Follow-ups<span class="count alert">2</span></a>
+      <div class="nav-eyebrow">Team</div>
+      <a href="../manager/dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Manager console</a>
+    </nav>
+    <div class="side-foot">
+      <div class="avail"><span class="dot"></span>Available for leads</div>
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Open leads</span><span class="num" style="font-weight:600;color:var(--ink-700)">12 / 20</span></div>
+      <div class="cap-bar"><div class="cap-fill" style="width:60%"></div></div>
+      <div class="who">
+        <div class="who-av">FA</div>
+        <div><div class="who-n">Farhana Akter</div><div class="who-r">Sales Agent</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">Follow-ups &amp; Tasks</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search by name or phone…"></div>
+      <span class="chip dang"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg>2 SLA breaches</span>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="page-head">
+        <div class="t">
+          <h2>Monday 8 September</h2>
+          <p>Tasks the system created from call outcomes, stage changes and automation rules, plus anything you added by hand. Scheduled emails are shown read-only so you always know what is about to go out in your name.</p>
+        </div>
+        <div class="acts">
+          <div class="filters" data-filter-group="tasks">
+            <button type="button" class="fchip on" data-filter="*">All<span class="n">11</span></button>
+            <button type="button" class="fchip" data-filter="call">Calls<span class="n">6</span></button>
+            <button type="button" class="fchip" data-filter="email">Emails<span class="n">3</span></button>
+            <button type="button" class="fchip" data-filter="visit">Site visits<span class="n">2</span></button>
+          </div>
+          <button type="button" class="btn pri sm" data-modal="task"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>New task</button>
+        </div>
+      </div>
+
+      <div class="g3 mb5">
+
+        <section class="card" style="border-color:var(--danger-bd)">
+          <div class="card-h" style="background:var(--danger-bg);border-bottom-color:var(--danger-bd)">
+            <h2 style="color:var(--danger-fg)">Overdue</h2>
+            <div class="spacer"></div>
+            <span class="chip dang">2</span>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="call">
+            <div class="unit-i" style="background:var(--danger-bg);color:var(--danger-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg></div>
+            <div class="unit-t">
+              <b><a href="lead-detail.page.html">Md. Rafiqul Islam</a></b>
+              <small>First contact · due 08:00 · <span style="color:var(--danger-fg);font-weight:600">3h 12m late</span></small>
+            </div>
+            <div class="unit-p"><span class="chip hot">81</span></div>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="call">
+            <div class="unit-i" style="background:var(--danger-bg);color:var(--danger-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg></div>
+            <div class="unit-t">
+              <b><a href="lead-detail.page.html">Ayesha Siddika</a></b>
+              <small>First contact · due 05:30 · <span style="color:var(--danger-fg);font-weight:600">5h 40m late</span></small>
+            </div>
+            <div class="unit-p"><span class="chip warm">61</span></div>
+          </div>
+          <div class="tbl-foot">
+            <span class="hint">Both breach the first-contact SLA and are visible on the manager dashboard.</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Due today</h2><div class="spacer"></div><span class="chip warm">4</span></div>
+          <div class="unit" data-filter-item="tasks" data-tags="email">
+            <div class="unit-i" style="background:var(--warm-bg);color:var(--warm-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg></div>
+            <div class="unit-t">
+              <b><a href="lead-detail.page.html">Nusrat Jahan</a></b>
+              <small>Send Orchard Garden floor plan + per-sqft comparison · before Thursday's visit</small>
+            </div>
+            <div class="unit-p"><button type="button" class="btn xs" data-task-done>Done</button></div>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="call">
+            <div class="unit-i" style="background:var(--warm-bg);color:var(--warm-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg></div>
+            <div class="unit-t">
+              <b><a href="lead-detail.page.html">Abdul Karim Chowdhury</a></b>
+              <small>Post-visit follow-up call · 16:00</small>
+            </div>
+            <div class="unit-p"><button type="button" class="btn xs" data-task-done>Done</button></div>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="call">
+            <div class="unit-i" style="background:var(--warm-bg);color:var(--warm-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg></div>
+            <div class="unit-t">
+              <b><a href="lead-detail.page.html">Farzana Haque</a></b>
+              <small>First contact · due 18:00 · 24-hour Warm SLA</small>
+            </div>
+            <div class="unit-p"><button type="button" class="btn xs" data-task-done>Done</button></div>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="email">
+            <div class="unit-i" style="background:var(--warm-bg);color:var(--warm-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+            <div class="unit-t">
+              <b><a href="lead-detail.page.html">Tanvir Ahmed</a></b>
+              <small>Send revised payment plan for the 4-bed duplex · 17:00</small>
+            </div>
+            <div class="unit-p"><button type="button" class="btn xs" data-task-done>Done</button></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Upcoming</h2><div class="spacer"></div><span class="chip">5</span></div>
+          <div class="unit" data-filter-item="tasks" data-tags="visit">
+            <div class="unit-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg></div>
+            <div class="unit-t"><b><a href="lead-detail.page.html">Rehana Begum</a></b><small>Sardinia site visit · Sat 13 Sep, 10:00</small></div>
+            <div class="unit-p"><span class="chip">Sat</span></div>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="visit">
+            <div class="unit-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg></div>
+            <div class="unit-t"><b><a href="lead-detail.page.html">Nusrat Jahan</a></b><small>Orchard Garden site visit · Thu 11 Sep, 16:00</small></div>
+            <div class="unit-p"><span class="chip hot">Thu</span></div>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="call">
+            <div class="unit-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg></div>
+            <div class="unit-t"><b><a href="lead-detail.page.html">Shahnaz Parvin</a></b><small>Call back as agreed · Wed 10 Sep, 11:00</small></div>
+            <div class="unit-p"><span class="chip">Wed</span></div>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="call">
+            <div class="unit-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg></div>
+            <div class="unit-t"><b><a href="lead-detail.page.html">Sohel Mahmud</a></b><small>Call back as agreed · Thu 11 Sep, 15:00</small></div>
+            <div class="unit-p"><span class="chip">Thu</span></div>
+          </div>
+          <div class="unit" data-filter-item="tasks" data-tags="email">
+            <div class="unit-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+            <div class="unit-t"><b><a href="lead-detail.page.html">Kamrul Hasan</a></b><small>Send duplex brochure · Wed 10 Sep</small></div>
+            <div class="unit-p"><span class="chip">Wed</span></div>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="split mb5">
+        <section class="card ai">
+          <div class="card-h">
+            <h2>Scheduled to send in your name</h2>
+            <span class="chip ai">Automation</span>
+            <div class="spacer"></div>
+            <span class="chip">Read-only</span>
+          </div>
+          <div class="card-b" style="font-size:13.5px;color:var(--ink-500);line-height:1.7;border-bottom:1px solid var(--border)">
+            These go out automatically. Automation pauses on any lead the moment you log a live conversation, and
+            nothing sends outside working hours — anything triggered after 20:00 waits until 09:00 the next working day.
+          </div>
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th>Lead</th><th>Template</th><th>Rule</th><th>Sends</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><a href="lead-detail.page.html" class="nm">Mizanur Rahman</a></td>
+                  <td>Nurture step 3 — Nasirabad portfolio</td>
+                  <td><span class="tag trg">No contact 5 days</span></td>
+                  <td>Tomorrow 09:15</td>
+                  <td><button type="button" class="btn xs" data-skip>Skip</button></td>
+                </tr>
+                <tr>
+                  <td><a href="lead-detail.page.html" class="nm">Rehana Begum</a></td>
+                  <td>Site visit reminder — Sardinia</td>
+                  <td><span class="tag trg">Visit in 48h</span></td>
+                  <td>Thu 09:00</td>
+                  <td><button type="button" class="btn xs" data-skip>Skip</button></td>
+                </tr>
+                <tr>
+                  <td><a href="lead-detail.page.html" class="nm">Nazmul Karim</a></td>
+                  <td>Welcome — 2BR Agrabad options</td>
+                  <td><span class="tag trg">Lead qualified</span></td>
+                  <td>Today 14:00</td>
+                  <td><button type="button" class="btn xs" data-skip>Skip</button></td>
+                </tr>
+                <tr>
+                  <td><a href="lead-detail.page.html" class="nm">Sohel Mahmud</a></td>
+                  <td>Nurture step 2 — Khulshi 4BR</td>
+                  <td><span class="tag trg">No contact 5 days</span></td>
+                  <td>Wed 09:15</td>
+                  <td><button type="button" class="btn xs" data-skip>Skip</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Site visits this week</h2><div class="spacer"></div><span class="chip">3 booked</span></div>
+          <div class="card-b">
+            <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;text-align:center">
+              <div><div class="eyebrow">Mon</div><div style="margin-top:7px;padding:11px 4px;border:1px solid var(--brand-700);background:var(--brand-050);border-radius:var(--r-sm)"><b style="font-family:var(--font-display);font-size:16px">8</b><div class="hint" style="margin-top:3px">Today</div></div></div>
+              <div><div class="eyebrow">Tue</div><div style="margin-top:7px;padding:11px 4px;border:1px solid var(--border);border-radius:var(--r-sm)"><b style="font-family:var(--font-display);font-size:16px">9</b><div class="hint" style="margin-top:3px">—</div></div></div>
+              <div><div class="eyebrow">Wed</div><div style="margin-top:7px;padding:11px 4px;border:1px solid var(--border);border-radius:var(--r-sm)"><b style="font-family:var(--font-display);font-size:16px">10</b><div class="hint" style="margin-top:3px">—</div></div></div>
+              <div><div class="eyebrow">Thu</div><div style="margin-top:7px;padding:11px 4px;border:1px solid var(--hot-bd);background:var(--hot-bg);border-radius:var(--r-sm)"><b style="font-family:var(--font-display);font-size:16px;color:var(--hot-fg)">11</b><div class="hint" style="margin-top:3px;color:var(--hot-fg)">1 visit</div></div></div>
+              <div><div class="eyebrow">Fri</div><div style="margin-top:7px;padding:11px 4px;border:1px solid var(--border);border-radius:var(--r-sm)"><b style="font-family:var(--font-display);font-size:16px">12</b><div class="hint" style="margin-top:3px">—</div></div></div>
+              <div><div class="eyebrow">Sat</div><div style="margin-top:7px;padding:11px 4px;border:1px solid var(--hot-bd);background:var(--hot-bg);border-radius:var(--r-sm)"><b style="font-family:var(--font-display);font-size:16px;color:var(--hot-fg)">13</b><div class="hint" style="margin-top:3px;color:var(--hot-fg)">2 visits</div></div></div>
+              <div><div class="eyebrow">Sun</div><div style="margin-top:7px;padding:11px 4px;border:1px solid var(--border);border-radius:var(--r-sm)"><b style="font-family:var(--font-display);font-size:16px">14</b><div class="hint" style="margin-top:3px">—</div></div></div>
+            </div>
+          </div>
+          <div class="unit">
+            <div class="unit-i" style="background:var(--hot-bg);color:var(--hot-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+            <div class="unit-t"><b>Orchard Garden · West Khulshi</b><small>Thu 11 Sep, 16:00 · Nusrat Jahan · Unit B-1104</small></div>
+            <div class="unit-p"><span class="chip hot">86</span></div>
+          </div>
+          <div class="unit">
+            <div class="unit-i" style="background:var(--hot-bg);color:var(--hot-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+            <div class="unit-t"><b>Sanmar Sardinia · Nasirabad</b><small>Sat 13 Sep, 10:00 · Rehana Begum · Unit C-503</small></div>
+            <div class="unit-p"><span class="chip warm">57</span></div>
+          </div>
+          <div class="unit">
+            <div class="unit-i" style="background:var(--hot-bg);color:var(--hot-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+            <div class="unit-t"><b>Orchard Garden · West Khulshi</b><small>Sat 13 Sep, 15:30 · Kamrul Hasan · duplex show unit</small></div>
+            <div class="unit-p"><span class="chip warm">56</span></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="card-h"><h2>Completed today</h2><div class="spacer"></div><span class="chip hot">3 done</span></div>
+        <div class="empty">
+          <div class="empty-i" style="background:var(--hot-bg);border-color:var(--hot-bd);color:var(--hot-fg)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 13 4 4 10-10"/></svg>
+          </div>
+          <b>Three tasks cleared this morning</b>
+          <p>Nusrat Jahan site visit booked · Abdul Karim Chowdhury called back · Tanvir Ahmed price sheet sent. When everything is cleared this section is the only thing left on the page.</p>
+          <a class="btn sm" href="my-leads.page.html">Back to my queue</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>

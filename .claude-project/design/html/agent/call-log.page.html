@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Call Log — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">My work</div>
+      <a href="my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h12"/></svg>My Leads<span class="count">12</span></a>
+      <a class="on" href="call-log.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Call Log</a>
+      <a href="followups.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Follow-ups<span class="count alert">2</span></a>
+      <div class="nav-eyebrow">Team</div>
+      <a href="../manager/dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Manager console</a>
+    </nav>
+    <div class="side-foot">
+      <div class="avail"><span class="dot"></span>Available for leads</div>
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Open leads</span><span class="num" style="font-weight:600;color:var(--ink-700)">12 / 20</span></div>
+      <div class="cap-bar"><div class="cap-fill" style="width:60%"></div></div>
+      <div class="who">
+        <div class="who-av">FA</div>
+        <div><div class="who-n">Farhana Akter</div><div class="who-r">Sales Agent</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">Call Log</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search by name or phone…"></div>
+      <span class="chip dang"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg>2 SLA breaches</span>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="page-head">
+        <div class="t">
+          <h2>My calls</h2>
+          <p>Every conversation is transcribed and analysed by the call-intelligence provider, then pushed here over a signed webhook. The score delta column shows what each call was actually worth.</p>
+        </div>
+        <div class="acts">
+          <span class="chip ai"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3.6"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>Provider · VoiceIQ</span>
+          <button type="button" class="btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Last 7 days</button>
+        </div>
+      </div>
+
+      <div class="g4 mb5">
+        <div class="kpi"><div><div class="eyebrow">Calls this week</div><div class="kpi-v">47</div></div><span class="kpi-d flat">32 outbound · 15 inbound</span></div>
+        <div class="kpi"><div><div class="eyebrow">Connect rate</div><div class="kpi-v">68<small>%</small></div></div><span class="kpi-d up"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+6 pts vs last week</span></div>
+        <div class="kpi"><div><div class="eyebrow">Average duration</div><div class="kpi-v">4:12</div></div><span class="kpi-d flat">Connected calls only</span></div>
+        <div class="kpi"><div><div class="eyebrow">Net score movement</div><div class="kpi-v" style="color:var(--hot-fg)">+68</div></div><span class="kpi-d flat">Across 9 leads this week</span></div>
+      </div>
+
+      <section class="card">
+        <div class="card-h">
+          <h2>Recent calls</h2>
+          <div class="spacer"></div>
+          <div class="filters" data-filter-group="calls">
+            <button type="button" class="fchip on" data-filter="*">All<span class="n">10</span></button>
+            <button type="button" class="fchip" data-filter="connected">Connected<span class="n">8</span></button>
+            <button type="button" class="fchip" data-filter="noanswer">No answer<span class="n">1</span></button>
+            <button type="button" class="fchip" data-filter="high">High engagement<span class="n">5</span></button>
+            <button type="button" class="fchip" data-filter="positive">Positive score delta<span class="n">7</span></button>
+            <button type="button" class="fchip" data-filter="awaiting">Awaiting analysis<span class="n">1</span></button>
+          </div>
+        </div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead>
+              <tr><th>When</th><th>Lead</th><th>Direction</th><th class="r">Duration</th><th>Outcome</th><th>Intent</th><th>Engagement</th><th>Sentiment</th><th class="r">Score delta</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr data-filter-item="calls" data-tags="connected high positive">
+                <td>Today 11:31<span class="sub">08 Sep 2026</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Nusrat Jahan</span><span class="sub">Orchard Garden 3BR</span></a></td>
+                <td><span class="chip hot">Inbound</span></td>
+                <td class="r">6:52</td>
+                <td><span class="chip hot">Connected</span></td>
+                <td class="num">78</td>
+                <td><span class="chip hot">High</span></td>
+                <td><span class="chip hot">Positive</span></td>
+                <td class="r"><span class="dlt">+14</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="connected high positive">
+                <td>Today 10:48<span class="sub">08 Sep 2026</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Abdul Karim Chowdhury</span><span class="sub">Post-site-visit</span></a></td>
+                <td><span class="chip nur">Outbound</span></td>
+                <td class="r">5:04</td>
+                <td><span class="chip hot">Connected</span></td>
+                <td class="num">71</td>
+                <td><span class="chip hot">High</span></td>
+                <td><span class="chip">Neutral</span></td>
+                <td class="r"><span class="dlt">+7</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="noanswer">
+                <td>Today 10:12<span class="sub">08 Sep 2026</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Ayesha Siddika</span><span class="sub">Billboard — GEC Circle</span></a></td>
+                <td><span class="chip nur">Outbound</span></td>
+                <td class="r">0:00</td>
+                <td><span class="chip cold">No answer</span></td>
+                <td class="muted">—</td>
+                <td class="muted">—</td>
+                <td class="muted">—</td>
+                <td class="r muted">0</td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="callback positive">
+                <td>Today 09:35<span class="sub">08 Sep 2026</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Kamrul Hasan</span><span class="sub">Duplex enquiry</span></a></td>
+                <td><span class="chip nur">Outbound</span></td>
+                <td class="r">2:41</td>
+                <td><span class="chip warm">Callback requested</span></td>
+                <td class="num">54</td>
+                <td><span class="chip warm">Medium</span></td>
+                <td><span class="chip">Neutral</span></td>
+                <td class="r"><span class="dlt">+2</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="connected awaiting">
+                <td>Today 09:02<span class="sub">08 Sep 2026</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Sohel Mahmud</span><span class="sub">Referral</span></a></td>
+                <td><span class="chip nur">Outbound</span></td>
+                <td class="r">1:18</td>
+                <td><span class="chip hot">Connected</span></td>
+                <td class="muted">—</td>
+                <td class="muted">—</td>
+                <td class="muted">—</td>
+                <td class="r"><span class="chip ai">Awaiting analysis</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="connected high positive">
+                <td>Yesterday 17:22<span class="sub">07 Sep 2026</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Tanvir Ahmed</span><span class="sub">Negotiation — 4BR</span></a></td>
+                <td><span class="chip hot">Inbound</span></td>
+                <td class="r">9:17</td>
+                <td><span class="chip hot">Connected</span></td>
+                <td class="num">84</td>
+                <td><span class="chip hot">High</span></td>
+                <td><span class="chip warm">Mixed</span></td>
+                <td class="r"><span class="dlt">+11</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="connected">
+                <td>Yesterday 15:40<span class="sub">07 Sep 2026</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Mizanur Rahman</span><span class="sub">Google Search</span></a></td>
+                <td><span class="chip nur">Outbound</span></td>
+                <td class="r">3:55</td>
+                <td><span class="chip hot">Connected</span></td>
+                <td class="num">58</td>
+                <td><span class="chip warm">Medium</span></td>
+                <td><span class="chip">Neutral</span></td>
+                <td class="r"><span class="dlt neg">−4</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="connected high positive">
+                <td>Yesterday 14:11<span class="sub">07 Sep 2026</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Shahnaz Parvin</span><span class="sub">Referral</span></a></td>
+                <td><span class="chip nur">Outbound</span></td>
+                <td class="r">4:33</td>
+                <td><span class="chip hot">Connected</span></td>
+                <td class="num">69</td>
+                <td><span class="chip hot">High</span></td>
+                <td><span class="chip hot">Positive</span></td>
+                <td class="r"><span class="dlt">+9</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="connected high positive">
+                <td>06 Sep 16:05<span class="sub">Saturday</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Rehana Begum</span><span class="sub">Sardinia resale</span></a></td>
+                <td><span class="chip hot">Inbound</span></td>
+                <td class="r">7:08</td>
+                <td><span class="chip hot">Connected</span></td>
+                <td class="num">63</td>
+                <td><span class="chip hot">High</span></td>
+                <td><span class="chip hot">Positive</span></td>
+                <td class="r"><span class="dlt">+13</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="calls" data-tags="connected positive">
+                <td>02 Sep 16:05<span class="sub">Tuesday</span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Nusrat Jahan</span><span class="sub">First qualification call</span></a></td>
+                <td><span class="chip nur">Outbound</span></td>
+                <td class="r">3:18</td>
+                <td><span class="chip hot">Connected</span></td>
+                <td class="num">61</td>
+                <td><span class="chip warm">Medium</span></td>
+                <td><span class="chip">Neutral</span></td>
+                <td class="r"><span class="dlt">+9</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl-foot">
+          <span>Showing <b data-filter-count="calls">10</b> of 47 calls this week</span>
+          <div class="pager">
+            <button type="button" aria-label="Previous page">‹</button>
+            <button type="button" class="on">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button" aria-label="Next page">›</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="split" style="margin-top:var(--sp-5)">
+        <section class="card ai">
+          <div class="card-h">
+            <h2>Latest analysis in full</h2>
+            <span class="chip ai">VoiceIQ</span>
+            <div class="spacer"></div>
+            <span class="chip">Nusrat Jahan · today 11:31</span>
+          </div>
+          <div class="card-b">
+            <p class="summary">Caller asked about 3-bedroom apartments at Orchard Garden in West Khulshi after seeing the Facebook advertisement. Confirmed a budget of ৳1.25 to ৳1.55 crore and said she wants to move within three to six months. She has bank pre-approval from City Bank. She pushed back twice on the per-square-foot rate, comparing it to a competitor quote on Zakir Hossain Road, and asked for written confirmation of the handover date for the B tower. Requested a site visit at Orchard Garden, and Thursday afternoon was agreed. She asked for the floor plan and a per-sqft comparison to be emailed before the visit.</p>
+            <div class="sig">
+              <span class="chip hot">Intent 78</span>
+              <span class="chip hot">Engagement High</span>
+              <span class="chip hot">Sentiment Positive</span>
+              <span class="chip warm">Objection · per-sqft price</span>
+              <span class="chip warm">Objection · handover date</span>
+              <span class="chip">7 questions asked</span>
+              <span class="chip">46% caller talk time</span>
+            </div>
+            <div style="margin-top:var(--sp-5)">
+              <div class="eyebrow" style="margin-bottom:9px">Entities extracted from this call</div>
+              <div class="sig" style="margin-top:0">
+                <span class="chip ai">budget ৳1.25–1.55 cr</span>
+                <span class="chip ai">timeline 3–6 months</span>
+                <span class="chip ai">location West Khulshi</span>
+                <span class="chip ai">unit 3-bed · 1,600 sqft</span>
+                <span class="chip ai">financing bank loan</span>
+                <span class="chip ai">parking 1 space</span>
+              </div>
+            </div>
+            <div class="player">
+              <button type="button" class="play" aria-label="Play call recording"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+              <div class="wave"><i></i></div>
+              <span class="num" style="font-size:12.5px;color:var(--ink-500)">4:14 / 6:52</span>
+              <a href="lead-detail.page.html" style="font-size:13px;color:var(--ai-700);font-weight:700">Open lead</a>
+            </div>
+          </div>
+          <div class="call-f">
+            <span class="muted">Delivered by webhook 08 Sep 11:38 · signature verified · idempotency key ci_9f2a11c4</span>
+            <span class="dlt">Score +14 · 72 → 86</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Awaiting analysis</h2><div class="spacer"></div><span class="chip ai">2 calls</span></div>
+          <div class="card-b" style="font-size:13.5px;color:var(--ink-500);line-height:1.7">
+            Two connected calls are with the provider and have not returned a summary yet. Their score deltas will
+            apply automatically when the webhook lands — nothing needs to be re-entered by hand.
+          </div>
+          <div class="unit">
+            <div class="unit-i" style="background:var(--ai-050);color:var(--ai-700)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg></div>
+            <div class="unit-t"><b>Sohel Mahmud</b><small>Today 09:02 · outbound · 1:18 · queued 6 minutes</small></div>
+            <div class="unit-p"><span class="chip ai">Processing</span></div>
+          </div>
+          <div class="unit">
+            <div class="unit-i" style="background:var(--ai-050);color:var(--ai-700)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg></div>
+            <div class="unit-t"><b>Farzana Haque</b><small>Today 08:47 · outbound · 2:03 · queued 21 minutes</small></div>
+            <div class="unit-p"><span class="chip ai">Processing</span></div>
+          </div>
+          <div class="card-b" style="border-top:1px solid var(--border)">
+            <div class="eyebrow" style="margin-bottom:11px">Loading state</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <div class="skel" style="width:70%"></div>
+              <div class="skel" style="width:92%"></div>
+              <div class="skel" style="width:54%"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>

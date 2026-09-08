@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipeline Dashboard — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">Pipeline</div>
+      <a class="on" href="dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7.5" height="8.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.5"/><rect x="3" y="14.5" width="7.5" height="6.5" rx="1.5"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.5"/></svg>Dashboard</a>
+      <a href="leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>All Leads<span class="count">1,284</span></a>
+      <a href="review-queue.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/><path d="M12 17V11"/></svg>Review Queue<span class="count">704</span></a>
+      <div class="nav-eyebrow">Intelligence</div>
+      <a href="scoring-rules.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>Scoring Rules</a>
+      <a href="campaigns.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 4 5-7 4 5"/><path d="M3 21h18"/></svg>Campaigns</a>
+      <div class="nav-eyebrow">Configuration</div>
+      <a href="automation.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 7H14a4 4 0 0 1 0 8h-2.5"/></svg>Automation</a>
+      <a href="team.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Team &amp; Routing</a>
+      <div class="nav-eyebrow">Agent view</div>
+      <a href="../agent/my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Agent portal</a>
+    </nav>
+    <div class="side-foot">
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Scoring rule set</span><span style="font-weight:700;color:var(--ink-700)">v7</span></div>
+      <div class="hint" style="margin-top:3px">Active since 24 Aug 2026</div>
+      <div class="who">
+        <div class="who-av">SR</div>
+        <div><div class="who-n">Shahriar Rahman</div><div class="who-r">Sales Manager</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">Pipeline Dashboard</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search leads…"></div>
+      <button type="button" class="btn sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Last 30 days<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="g4 mb5">
+        <div class="kpi"><div><div class="eyebrow">Leads received</div><div class="kpi-v">1,284</div></div><span class="kpi-d up"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+18% vs Aug</span></div>
+        <div class="kpi"><div><div class="eyebrow">Qualified rate</div><div class="kpi-v">24.3<small>%</small></div></div><span class="kpi-d up"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+3.1 pts · 312 leads</span></div>
+        <div class="kpi"><div><div class="eyebrow">Garbage filtered</div><div class="kpi-v">704</div></div><span class="kpi-d flat">54.8% of intake · roughly 117 agent-hours saved</span></div>
+        <div class="kpi"><div><div class="eyebrow">Cost per qualified lead</div><div class="kpi-v">৳3,590</div></div><span class="kpi-d up"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>−৳420 vs Aug</span></div>
+        <div class="kpi"><div><div class="eyebrow">Average score</div><div class="kpi-v">41</div></div><span class="kpi-d flat">Median 36 · rule set v7</span></div>
+        <div class="kpi"><div><div class="eyebrow">First-contact SLA</div><div class="kpi-v">87<small>%</small></div></div><span class="kpi-d down"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>−4 pts · 6 breaches open</span></div>
+        <div class="kpi"><div><div class="eyebrow">Site visits booked</div><div class="kpi-v">96</div></div><span class="kpi-d up"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+11 vs Aug</span></div>
+        <div class="kpi"><div><div class="eyebrow">Booked</div><div class="kpi-v">21</div></div><span class="kpi-d flat">6.7% of qualified · ৳27.4 crore contract value</span></div>
+      </div>
+
+      <div class="split mb5">
+        <section class="card">
+          <div class="card-h">
+            <h2>Qualification funnel</h2>
+            <div class="spacer"></div>
+            <span class="chip">Last 30 days</span>
+            <a class="btn sm" href="leads.page.html">Open lead list</a>
+          </div>
+          <div class="card-b">
+            <div class="fn">
+              <div class="fn-row"><span>Leads received</span><div class="fn-bar" style="width:100%">1,284</div><span class="fn-drop">—</span></div>
+              <div class="fn-row"><span>Scored</span><div class="fn-bar" style="width:100%">1,284</div><span class="fn-drop">0% loss</span></div>
+              <div class="fn-row"><span>Qualified</span><div class="fn-bar" style="width:24.3%">312</div><span class="fn-drop">−75.7%</span></div>
+              <div class="fn-row"><span>Contacted</span><div class="fn-bar" style="width:22.5%">289</div><span class="fn-drop">−7.4%</span></div>
+              <div class="fn-row"><span>Site visit</span><div class="fn-bar" style="width:7.5%">96</div><span class="fn-drop">−66.8%</span></div>
+              <div class="fn-row"><span>Negotiation</span><div class="fn-bar" style="width:3.4%">44</div><span class="fn-drop">−54.2%</span></div>
+              <div class="fn-row"><span>Booked</span><div class="fn-bar" style="width:1.6%">21</div><span class="fn-drop">−52.3%</span></div>
+            </div>
+            <p class="hint" style="margin-top:var(--sp-5);line-height:1.7">
+              The largest single drop is qualification, and that is the point of the system — 972 leads never reached
+              an agent. The drop worth attention is site visit → negotiation, which is a sales-conversation problem
+              rather than a lead-quality one.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Score distribution</h2><div class="spacer"></div><span class="chip">1,284 scored</span></div>
+          <div class="card-b">
+            <div class="dist">
+              <div class="dcol"><span class="dval">148</span><div class="dbar" style="height:21%;background:var(--hot-fg)"></div><span class="dlab">Hot<br>75–100</span></div>
+              <div class="dcol"><span class="dval">164</span><div class="dbar" style="height:23%;background:#F59E0B"></div><span class="dlab">Warm<br>55–74</span></div>
+              <div class="dcol"><span class="dval">268</span><div class="dbar" style="height:38%;background:var(--brand-700)"></div><span class="dlab">Nurture<br>35–54</span></div>
+              <div class="dcol"><span class="dval">704</span><div class="dbar" style="height:100%;background:var(--cold-bd)"></div><span class="dlab">Cold<br>0–34</span></div>
+            </div>
+            <div style="margin-top:var(--sp-5);padding-top:var(--sp-4);border-top:1px solid var(--border);display:flex;gap:var(--sp-3);flex-wrap:wrap">
+              <span class="chip hot">312 routed to agents</span>
+              <span class="chip nur">268 in nurture sequences</span>
+              <span class="chip cold">704 in review queue</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="g3 mb5">
+        <section class="card">
+          <div class="card-h"><h2>Needs attention</h2><div class="spacer"></div><span class="chip dang">4 items</span></div>
+          <div class="att">
+            <div class="att-i" style="background:var(--warm-bg);color:var(--warm-fg)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 12h11M11 7l5 5-5 5"/><path d="M20 5v14"/></svg></div>
+            <div class="att-t"><b>Leads needing routing</b><small>Every agent is at capacity</small></div>
+            <a href="team.page.html" class="att-n">14</a>
+          </div>
+          <div class="att">
+            <div class="att-i" style="background:var(--danger-bg);color:var(--danger-fg)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg></div>
+            <div class="att-t"><b>First-contact SLA breached</b><small>4 Hot · 2 Warm</small></div>
+            <a href="leads.page.html" class="att-n" style="color:var(--danger-fg)">6</a>
+          </div>
+          <div class="att">
+            <div class="att-i" style="background:var(--cold-bg);color:var(--cold-fg)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 11a8 8 0 1 0-2.3 6.3"/><path d="M20 5v6h-6"/></svg></div>
+            <div class="att-t"><b>Stale scores</b><small>Profile changed since last scoring run</small></div>
+            <a href="leads.page.html" class="att-n">3</a>
+          </div>
+          <div class="att">
+            <div class="att-i" style="background:var(--danger-bg);color:var(--danger-fg)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+            <div class="att-t"><b>Webhook dead letters</b><small>VoiceIQ · caller number matched no lead</small></div>
+            <a href="team.page.html" class="att-n" style="color:var(--danger-fg)">2</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Why leads were binned</h2><div class="spacer"></div><span class="chip cold">704 total</span></div>
+          <div class="rl-row"><span style="width:118px">Wrong number</span><div class="rl-bar"><i style="width:100%"></i></div><span class="rl-n">231</span></div>
+          <div class="rl-row"><span style="width:118px">No purchase intent</span><div class="rl-bar"><i style="width:86%"></i></div><span class="rl-n">198</span></div>
+          <div class="rl-row"><span style="width:118px">Below budget floor</span><div class="rl-bar"><i style="width:61%"></i></div><span class="rl-n">142</span></div>
+          <div class="rl-row"><span style="width:118px">Out of service area</span><div class="rl-bar"><i style="width:31%"></i></div><span class="rl-n">71</span></div>
+          <div class="rl-row"><span style="width:118px">Duplicate</span><div class="rl-bar"><i style="width:16%"></i></div><span class="rl-n">38</span></div>
+          <div class="rl-row"><span style="width:118px">Job seeker</span><div class="rl-bar"><i style="width:7%"></i></div><span class="rl-n">16</span></div>
+          <div class="rl-row"><span style="width:118px">Spam or test</span><div class="rl-bar"><i style="width:3%"></i></div><span class="rl-n">8</span></div>
+          <div class="tbl-foot">
+            <span class="hint">231 wrong numbers is a lead-form data problem, not a targeting one.</span>
+            <a class="btn sm" href="review-queue.page.html">Review queue</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Team</h2><div class="spacer"></div><a class="btn sm" href="team.page.html">Manage</a></div>
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th>Agent</th><th>Load</th><th class="r">SLA</th><th class="r">Visits</th><th class="r">Booked</th></tr></thead>
+              <tbody>
+                <tr><td class="nm">Farhana Akter</td><td><div class="util"><i style="width:60%"></i></div><span class="sub num">12 / 20</span></td><td class="r">94%</td><td class="r">6</td><td class="r">3</td></tr>
+                <tr><td class="nm">Imran Hossain</td><td><div class="util"><i style="width:76%"></i></div><span class="sub num">19 / 25</span></td><td class="r">89%</td><td class="r">5</td><td class="r">2</td></tr>
+                <tr><td class="nm">Sadia Rahman</td><td><div class="util"><i class="over" style="width:100%"></i></div><span class="sub num" style="color:var(--danger-fg)">25 / 25 — at capacity</span></td><td class="r">81%</td><td class="r">4</td><td class="r">2</td></tr>
+                <tr><td class="nm">Mahbub Alam</td><td><div class="util"><i style="width:62%"></i></div><span class="sub num">13 / 21</span></td><td class="r">92%</td><td class="r">3</td><td class="r">1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tbl-foot"><span class="hint">Sadia Rahman is full — new Khulshi leads are queuing.</span></div>
+        </section>
+      </div>
+
+      <section class="card mb5">
+        <div class="card-h">
+          <h2>Campaign quality</h2>
+          <div class="spacer"></div>
+          <span class="chip">Sorted by cost per qualified lead</span>
+          <a class="btn sm" href="campaigns.page.html">Full report</a>
+        </div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead><tr><th>Campaign</th><th>Channel</th><th class="r">Spend</th><th class="r">Leads</th><th class="r">Qualified</th><th class="r">Qualified %</th><th class="r">Garbage %</th><th class="r">CPQL</th><th>Verdict</th></tr></thead>
+            <tbody>
+              <tr><td class="nm"><a href="campaigns.page.html">Referral — Existing Owners</a></td><td>Referral</td><td class="r">৳15,000</td><td class="r">134</td><td class="r">37</td><td class="r">27.6%</td><td class="r">44.0%</td><td class="r" style="font-weight:700">৳405</td><td><span class="chip hot">Scale up</span></td></tr>
+              <tr><td class="nm"><a href="campaigns.page.html">Orchard Garden Launch Event</a></td><td>Event</td><td class="r">৳1,60,000</td><td class="r">138</td><td class="r">61</td><td class="r">44.2%</td><td class="r">31.2%</td><td class="r" style="font-weight:700">৳2,623</td><td><span class="chip hot">Scale up</span></td></tr>
+              <tr><td class="nm"><a href="campaigns.page.html">Google Search — Apartment Chattogram</a></td><td>Google</td><td class="r">৳2,85,000</td><td class="r">214</td><td class="r">78</td><td class="r">36.4%</td><td class="r">38.3%</td><td class="r" style="font-weight:700">৳3,654</td><td><span class="chip warm">Hold</span></td></tr>
+              <tr><td class="nm"><a href="campaigns.page.html">FB — Orchard Garden 3BR Sep</a></td><td>Facebook</td><td class="r">৳4,20,000</td><td class="r">486</td><td class="r">92</td><td class="r">18.9%</td><td class="r">62.1%</td><td class="r" style="font-weight:700">৳4,565</td><td><span class="chip warm">Retarget</span></td></tr>
+              <tr><td class="nm"><a href="campaigns.page.html">Billboard — GEC Circle</a></td><td>OOH</td><td class="r">৳2,40,000</td><td class="r">312</td><td class="r">44</td><td class="r">14.1%</td><td class="r">71.5%</td><td class="r" style="font-weight:700;color:var(--danger-fg)">৳5,455</td><td><span class="chip dang">Review</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl-foot">
+          <span>Total spend ৳11,20,000 · 1,284 leads · 312 qualified · blended CPQL ৳3,590</span>
+          <span class="chip">Cost per booking ৳53,333</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-h"><h2>Recent activity</h2><div class="spacer"></div><span class="chip">Live</span></div>
+        <ul class="tl" style="padding-top:var(--sp-5)">
+          <li><span class="ti g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>
+            <div class="tc"><b>Nusrat Jahan moved into Hot · 72 → 86</b><p>Inbound call analysed by VoiceIQ. Site visit booked at Orchard Garden for Thursday.</p><div class="when">Today, 11:38 · Farhana Akter</div></div></li>
+          <li><span class="ti r"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg></span>
+            <div class="tc"><b>SLA breach · Md. Rafiqul Islam</b><p>Hot lead, 2-hour first-contact target missed by 3h 12m. Assigned to Farhana Akter.</p><div class="when">Today, 10:12</div></div></li>
+          <li><span class="ti"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 11a8 8 0 1 0-2.3 6.3"/><path d="M20 5v6h-6"/></svg></span>
+            <div class="tc"><b>3 leads restored from the Review Queue</b><p>All three were binned as "below budget floor" but had understated their budget on the first call.</p><div class="when">Today, 09:41 · Shahriar Rahman</div></div></li>
+          <li><span class="ti a"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="3.6"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
+            <div class="tc"><b>Automation released 34 queued emails</b><p>Held overnight under the 20:00 cut-off, sent at 09:15 this morning.</p><div class="when">Today, 09:15</div></div></li>
+          <li><span class="ti r"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+            <div class="tc"><b>2 webhook payloads in dead letters</b><p>VoiceIQ delivered two analysed calls whose caller number matched no existing lead and could not be attributed to a campaign.</p><div class="when">Yesterday, 18:52</div></div></li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>

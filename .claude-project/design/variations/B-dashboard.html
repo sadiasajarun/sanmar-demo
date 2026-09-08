@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variation B · Pipeline Dashboard — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--brand-900:#312E81;--brand-800:#3730A3;--brand-700:#4338CA;--brand-600:#4F46E5;--brand-100:#E0E7FF;--brand-050:#EEF2FF;
+--canvas:#F1F5F9;--surface:#FFFFFF;--surface-2:#F8FAFC;--sidebar-bg:#0F172A;--sidebar-bg-2:#1E293B;--sidebar-fg:#94A3B8;
+--ink-900:#020617;--ink-700:#0F172A;--ink-500:#475569;--ink-400:#64748B;--border:#E2E8F0;--border-strong:#CBD5E1;
+--hot-fg:#047857;--hot-bg:#D1FAE5;--hot-bd:#6EE7B7;
+--warm-fg:#92400E;--warm-bg:#FEF3C7;--warm-bd:#FCD34D;
+--nurture-fg:#1D4ED8;--nurture-bg:#DBEAFE;--nurture-bd:#93C5FD;
+--cold-fg:#475569;--cold-bg:#E2E8F0;--cold-bd:#CBD5E1;
+--danger-fg:#B91C1C;--danger-bg:#FEE2E2;--danger-bd:#FCA5A5;
+--success-fg:#047857;--success-bg:#D1FAE5;--warning-fg:#92400E;--warning-bg:#FEF3C7;
+--font-body:'Inter',-apple-system,'Segoe UI',Roboto,system-ui,sans-serif;
+--font-mono:'JetBrains Mono','Cascadia Mono',Consolas,monospace;
+--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;
+--r-sm:3px;--r-md:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);font-size:13px;line-height:1.5;color:var(--ink-700);background:var(--canvas);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;cursor:pointer}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+svg{display:block;flex:none}
+.num{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+
+.app{display:flex;min-height:100vh}
+.side{width:224px;flex:none;background:var(--sidebar-bg);color:var(--sidebar-fg);display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.brand{display:flex;align-items:center;gap:9px;padding:14px var(--sp-4);border-bottom:1px solid var(--sidebar-bg-2)}
+.brand-mark{width:26px;height:26px;border-radius:var(--r-sm);background:var(--brand-600);display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px;font-family:var(--font-mono)}
+.brand-name{color:#fff;font-weight:600;font-size:13.5px}
+.brand-sub{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;margin-top:1px}
+.nav{padding:var(--sp-3) var(--sp-2);flex:1;overflow-y:auto}
+.nav-eyebrow{font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#64748B;padding:0 var(--sp-3);margin:var(--sp-4) 0 var(--sp-2)}
+.nav-eyebrow:first-child{margin-top:0}
+.nav a{display:flex;align-items:center;gap:9px;padding:7px var(--sp-3);border-radius:var(--r-sm);font-size:13px;color:var(--sidebar-fg);transition:background .1s linear,color .1s linear}
+.nav a:hover{background:var(--sidebar-bg-2);color:#fff}
+.nav a.on{background:var(--brand-700);color:#fff;font-weight:500}
+.side-foot{padding:var(--sp-3) var(--sp-4);border-top:1px solid var(--sidebar-bg-2)}
+.who{display:flex;align-items:center;gap:8px}
+.who-av{width:26px;height:26px;border-radius:var(--r-sm);background:var(--brand-700);display:grid;place-items:center;color:#fff;font-size:10.5px;font-weight:600;flex:none;font-family:var(--font-mono)}
+
+.main{flex:1;min-width:0}
+.top{height:52px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-3);padding:0 var(--sp-5);position:sticky;top:0;z-index:20}
+.h1{font-size:17px;font-weight:600;letter-spacing:-.015em}
+.top-spacer{flex:1}
+.range,.search{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;padding:6px 10px;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface)}
+.range:hover{background:var(--surface-2)}
+.search{background:var(--canvas);width:210px;color:var(--ink-400)}
+.search input{border:none;background:none;outline:none;font:inherit;color:var(--ink-700);width:100%}
+.content{padding:var(--sp-5)}
+
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md)}
+.card-h{display:flex;align-items:center;gap:var(--sp-3);padding:9px var(--sp-4);border-bottom:1px solid var(--border);background:var(--surface-2)}
+.card-h h2{font-size:13px;font-weight:600}
+.card-b{padding:var(--sp-4)}
+.eyebrow{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-400)}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:500;padding:2px 7px;border-radius:var(--r-sm);border:1px solid var(--border-strong);background:var(--surface);color:var(--ink-500);white-space:nowrap}
+.chip.hot{background:var(--hot-bg);color:var(--hot-fg);border-color:var(--hot-bd)}
+.chip.warm{background:var(--warm-bg);color:var(--warm-fg);border-color:var(--warm-bd)}
+.chip.cold{background:var(--cold-bg);color:var(--cold-fg);border-color:var(--cold-bd)}
+.chip.dang{background:var(--danger-bg);color:var(--danger-fg);border-color:var(--danger-bd)}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:5px 10px;border-radius:var(--r-sm);border:1px solid var(--border-strong);background:var(--surface);transition:background .1s,border-color .1s}
+.btn:hover{background:var(--surface-2);border-color:var(--ink-400)}
+
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp-3);margin-bottom:var(--sp-4)}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:11px var(--sp-4);min-height:88px;display:flex;flex-direction:column;justify-content:space-between;border-left:3px solid var(--border-strong)}
+.kpi.k1{border-left-color:var(--brand-700)}.kpi.k2{border-left-color:var(--hot-fg)}
+.kpi.k3{border-left-color:var(--cold-fg)}.kpi.k4{border-left-color:#0891B2}
+.kpi.k5{border-left-color:var(--brand-700)}.kpi.k6{border-left-color:var(--danger-fg)}
+.kpi.k7{border-left-color:#0891B2}.kpi.k8{border-left-color:var(--hot-fg)}
+.kpi-v{font-family:var(--font-mono);font-size:26px;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-top:4px}
+.kpi-d{font-size:11px;display:inline-flex;align-items:center;gap:4px;margin-top:4px}
+.up{color:var(--success-fg)}.down{color:var(--danger-fg)}.flat{color:var(--ink-400)}
+
+.row2{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:var(--sp-4);margin-bottom:var(--sp-4);align-items:start}
+.row3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-4);align-items:start;margin-bottom:var(--sp-4)}
+
+.fn{display:flex;flex-direction:column;gap:7px}
+.fn-row{display:grid;grid-template-columns:126px 1fr 84px;align-items:center;gap:var(--sp-3);font-size:12.5px}
+.fn-bar{height:22px;border-radius:var(--r-sm);background:var(--brand-700);display:flex;align-items:center;padding-left:8px;color:#fff;font-family:var(--font-mono);font-size:11.5px;font-weight:700;min-width:40px}
+.fn-drop{font-family:var(--font-mono);font-size:11px;color:var(--ink-400);text-align:right}
+
+.dist{display:flex;align-items:flex-end;gap:var(--sp-3);height:138px;padding-top:var(--sp-2)}
+.dcol{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;height:100%;justify-content:flex-end}
+.dbar{width:100%;border-radius:var(--r-sm) var(--r-sm) 0 0;min-height:5px}
+.dlab{font-size:10.5px;color:var(--ink-500);text-align:center;line-height:1.3}
+.dval{font-family:var(--font-mono);font-size:12.5px;font-weight:700}
+
+.rl-row{display:flex;align-items:center;gap:var(--sp-3);padding:0 var(--sp-4);height:32px;border-bottom:1px solid var(--border);font-size:12.5px}
+.rl-row:last-child{border-bottom:none}
+.rl-bar{flex:1;height:5px;background:var(--cold-bg);overflow:hidden;border-radius:2px}
+.rl-bar i{display:block;height:100%;background:var(--cold-fg);opacity:.5}
+.rl-n{font-family:var(--font-mono);font-size:12px;width:34px;text-align:right;color:var(--ink-500)}
+
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+.tbl th{text-align:left;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-400);background:var(--surface-2);padding:7px var(--sp-4);border-bottom:2px solid var(--border-strong);white-space:nowrap}
+.tbl td{padding:0 var(--sp-4);height:36px;border-bottom:1px solid var(--border)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tbody tr:hover{background:var(--surface-2)}
+.tbl .r{text-align:right}
+.scroll{overflow-x:auto}
+
+.att{display:flex;align-items:center;gap:var(--sp-3);padding:0 var(--sp-4);height:44px;border-bottom:1px solid var(--border)}
+.att:last-child{border-bottom:none}
+.att-i{width:26px;height:26px;border-radius:var(--r-sm);display:grid;place-items:center;flex:none}
+.att-t{flex:1}.att-t b{font-size:12.5px;font-weight:600;display:block}
+.att-t small{color:var(--ink-400);font-size:11px}
+.att-n{font-family:var(--font-mono);font-size:17px;font-weight:700}
+
+.util{height:5px;background:var(--cold-bg);overflow:hidden;width:66px;border-radius:2px}
+.util i{display:block;height:100%;background:var(--brand-600)}
+
+@media(max-width:1280px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.row2,.row3{grid-template-columns:1fr}}
+@media(max-width:900px){.side{position:fixed;left:-224px}.content{padding:var(--sp-3)}}
+@media(max-width:600px){.kpis{grid-template-columns:1fr}.fn-row{grid-template-columns:96px 1fr 56px;font-size:11.5px}.search{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><div class="brand-mark">S</div><div><div class="brand-name">SANMAR</div><div class="brand-sub">Lead Intel</div></div></div>
+    <nav class="nav">
+      <div class="nav-eyebrow">Pipeline</div>
+      <a class="on" href="B-dashboard.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7.5" height="8.5" rx="1"/><rect x="13.5" y="3" width="7.5" height="5" rx="1"/><rect x="3" y="14.5" width="7.5" height="6.5" rx="1"/><rect x="13.5" y="11" width="7.5" height="10" rx="1"/></svg>Dashboard</a>
+      <a href="B-lead-detail.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>All Leads</a>
+      <a href="B-lead-detail.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/><path d="M12 17V11"/></svg>Review Queue</a>
+      <div class="nav-eyebrow">Intelligence</div>
+      <a href="B-lead-detail.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>Scoring Rules</a>
+      <a href="B-dashboard.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 4 5-7 4 5"/><path d="M3 21h18"/></svg>Campaigns</a>
+      <div class="nav-eyebrow">Configuration</div>
+      <a href="B-dashboard.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 7H14a4 4 0 0 1 0 8h-2.5"/></svg>Automation</a>
+      <a href="B-dashboard.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Team &amp; Routing</a>
+    </nav>
+    <div class="side-foot"><div class="who"><div class="who-av">SR</div><div><div style="color:#fff;font-weight:500;font-size:12px">Shahriar Rahman</div><div style="font-size:10.5px">Sales Manager</div></div></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">Pipeline Dashboard</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search leads…"></div>
+      <button class="range"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Last 30 days<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></button>
+    </header>
+
+    <main class="content">
+      <div class="kpis">
+        <div class="kpi k1"><div><div class="eyebrow">Leads received</div><div class="kpi-v">1,284</div></div><span class="kpi-d up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+18% vs Aug</span></div>
+        <div class="kpi k2"><div><div class="eyebrow">Qualified rate</div><div class="kpi-v">24.3%</div></div><span class="kpi-d up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+3.1 pts</span></div>
+        <div class="kpi k3"><div><div class="eyebrow">Garbage filtered</div><div class="kpi-v">704</div></div><span class="kpi-d flat">54.8% of intake · ~117 hrs saved</span></div>
+        <div class="kpi k4"><div><div class="eyebrow">Cost / qualified lead</div><div class="kpi-v">৳3,590</div></div><span class="kpi-d up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><path d="M12 5v14M5 12l7 7 7-7"/></svg>−৳420 vs Aug</span></div>
+        <div class="kpi k5"><div><div class="eyebrow">Average score</div><div class="kpi-v">41</div></div><span class="kpi-d flat">median 36 · rule set v7</span></div>
+        <div class="kpi k6"><div><div class="eyebrow">First-contact SLA</div><div class="kpi-v">87%</div></div><span class="kpi-d down"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><path d="M12 5v14M5 12l7 7 7-7"/></svg>−4 pts · 6 breaches</span></div>
+        <div class="kpi k7"><div><div class="eyebrow">Site visits booked</div><div class="kpi-v">96</div></div><span class="kpi-d up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+11 vs Aug</span></div>
+        <div class="kpi k8"><div><div class="eyebrow">Booked</div><div class="kpi-v">21</div></div><span class="kpi-d flat">6.7% of qualified · ৳18.4 cr</span></div>
+      </div>
+
+      <div class="row2">
+        <section class="card">
+          <div class="card-h"><h2>Qualification funnel</h2><div style="flex:1"></div><span class="chip">30d</span></div>
+          <div class="card-b">
+            <div class="fn">
+              <div class="fn-row"><span>Leads received</span><div class="fn-bar" style="width:100%">1,284</div><span class="fn-drop">—</span></div>
+              <div class="fn-row"><span>Scored</span><div class="fn-bar" style="width:100%;background:var(--brand-600)">1,284</div><span class="fn-drop">0%</span></div>
+              <div class="fn-row"><span>Qualified</span><div class="fn-bar" style="width:24.3%;background:#0891B2">312</div><span class="fn-drop">−75.7%</span></div>
+              <div class="fn-row"><span>Contacted</span><div class="fn-bar" style="width:22.5%;background:#0891B2">289</div><span class="fn-drop">−7.4%</span></div>
+              <div class="fn-row"><span>Site visit</span><div class="fn-bar" style="width:7.5%;background:#059669">96</div><span class="fn-drop">−66.8%</span></div>
+              <div class="fn-row"><span>Booked</span><div class="fn-bar" style="width:1.6%;background:var(--hot-fg)">21</div><span class="fn-drop">−78.1%</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Score distribution</h2></div>
+          <div class="card-b">
+            <div class="dist">
+              <div class="dcol"><span class="dval">148</span><div class="dbar" style="height:21%;background:var(--hot-fg)"></div><span class="dlab">HOT<br>75–100</span></div>
+              <div class="dcol"><span class="dval">164</span><div class="dbar" style="height:23%;background:#D97706"></div><span class="dlab">WARM<br>55–74</span></div>
+              <div class="dcol"><span class="dval">268</span><div class="dbar" style="height:38%;background:var(--nurture-fg)"></div><span class="dlab">NURTURE<br>35–54</span></div>
+              <div class="dcol"><span class="dval">704</span><div class="dbar" style="height:100%;background:var(--cold-bd)"></div><span class="dlab">COLD<br>0–34</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="row3">
+        <section class="card">
+          <div class="card-h"><h2>Needs attention</h2></div>
+          <div class="att"><div class="att-i" style="background:var(--warning-bg);color:var(--warning-fg)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 12h11M11 7l5 5-5 5"/><path d="M20 5v14"/></svg></div><div class="att-t"><b>Needs routing</b><small>All agents at capacity</small></div><span class="att-n">14</span></div>
+          <div class="att"><div class="att-i" style="background:var(--danger-bg);color:var(--danger-fg)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg></div><div class="att-t"><b>SLA breached</b><small>4 Hot · 2 Warm</small></div><span class="att-n" style="color:var(--danger-fg)">6</span></div>
+          <div class="att"><div class="att-i" style="background:var(--cold-bg);color:var(--cold-fg)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 11a8 8 0 1 0-2.3 6.3"/><path d="M20 5v6h-6"/></svg></div><div class="att-t"><b>Stale scores</b><small>Profile changed, not re-scored</small></div><span class="att-n">3</span></div>
+          <div class="att"><div class="att-i" style="background:var(--danger-bg);color:var(--danger-fg)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg></div><div class="att-t"><b>Webhook dead letters</b><small>VoiceIQ · unmatched number</small></div><span class="att-n" style="color:var(--danger-fg)">2</span></div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Why leads were binned</h2><div style="flex:1"></div><span class="chip cold">704</span></div>
+          <div class="rl-row"><span style="width:100px">Wrong number</span><div class="rl-bar"><i style="width:100%"></i></div><span class="rl-n">231</span></div>
+          <div class="rl-row"><span style="width:100px">No intent</span><div class="rl-bar"><i style="width:86%"></i></div><span class="rl-n">198</span></div>
+          <div class="rl-row"><span style="width:100px">Below budget</span><div class="rl-bar"><i style="width:61%"></i></div><span class="rl-n">142</span></div>
+          <div class="rl-row"><span style="width:100px">Out of area</span><div class="rl-bar"><i style="width:31%"></i></div><span class="rl-n">71</span></div>
+          <div class="rl-row"><span style="width:100px">Duplicate</span><div class="rl-bar"><i style="width:16%"></i></div><span class="rl-n">38</span></div>
+          <div class="rl-row"><span style="width:100px">Job seeker</span><div class="rl-bar"><i style="width:7%"></i></div><span class="rl-n">16</span></div>
+          <div class="rl-row"><span style="width:100px">Spam / test</span><div class="rl-bar"><i style="width:3%"></i></div><span class="rl-n">8</span></div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Team</h2><div style="flex:1"></div><a href="B-dashboard.html" class="btn">Manage</a></div>
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th>Agent</th><th>Load</th><th class="r">SLA</th><th class="r">Bkd</th></tr></thead>
+              <tbody>
+                <tr><td>Farhana Akter</td><td><div class="util"><i style="width:60%"></i></div><small class="num" style="color:var(--ink-400)">12/20</small></td><td class="r num">94%</td><td class="r num">3</td></tr>
+                <tr><td>Imran Hossain</td><td><div class="util"><i style="width:76%"></i></div><small class="num" style="color:var(--ink-400)">19/25</small></td><td class="r num">89%</td><td class="r num">2</td></tr>
+                <tr><td>Sadia Rahman</td><td><div class="util"><i style="width:100%;background:var(--danger-fg)"></i></div><small class="num" style="color:var(--danger-fg)">25/25</small></td><td class="r num">81%</td><td class="r num">2</td></tr>
+                <tr><td>Mahbub Alam</td><td><div class="util"><i style="width:62%"></i></div><small class="num" style="color:var(--ink-400)">13/21</small></td><td class="r num">92%</td><td class="r num">1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="card-h"><h2>Campaign quality</h2><div style="flex:1"></div><span class="chip">sorted by CPQL</span><a href="B-dashboard.html" class="btn">Full report</a></div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead><tr><th>Campaign</th><th>Channel</th><th class="r">Spend</th><th class="r">Leads</th><th class="r">Qual</th><th class="r">Qual %</th><th class="r">Garbage %</th><th class="r">CPQL</th><th>Verdict</th></tr></thead>
+            <tbody>
+              <tr><td>Referral — Existing Owners</td><td>Referral</td><td class="r num">৳15,000</td><td class="r num">134</td><td class="r num">37</td><td class="r num">27.6%</td><td class="r num">44.0%</td><td class="r num" style="font-weight:700">৳405</td><td><span class="chip hot">Scale up</span></td></tr>
+              <tr><td>Property Fair CTG Aug</td><td>Event</td><td class="r num">৳1,60,000</td><td class="r num">138</td><td class="r num">61</td><td class="r num">44.2%</td><td class="r num">31.2%</td><td class="r num" style="font-weight:700">৳2,623</td><td><span class="chip hot">Scale up</span></td></tr>
+              <tr><td>Google Search — Apartment Chittagong</td><td>Google</td><td class="r num">৳2,85,000</td><td class="r num">214</td><td class="r num">78</td><td class="r num">36.4%</td><td class="r num">38.3%</td><td class="r num" style="font-weight:700">৳3,654</td><td><span class="chip warm">Hold</span></td></tr>
+              <tr><td>FB Lead Gen — Khulshi 3BR Sep</td><td>Facebook</td><td class="r num">৳4,20,000</td><td class="r num">486</td><td class="r num">92</td><td class="r num">18.9%</td><td class="r num">62.1%</td><td class="r num" style="font-weight:700">৳4,565</td><td><span class="chip warm">Retarget</span></td></tr>
+              <tr><td>Billboard GEC Circle</td><td>OOH</td><td class="r num">৳2,40,000</td><td class="r num">312</td><td class="r num">44</td><td class="r num">14.1%</td><td class="r num">71.5%</td><td class="r num" style="font-weight:700;color:var(--danger-fg)">৳5,455</td><td><span class="chip dang">Review</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>

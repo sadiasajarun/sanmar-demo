@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Leads — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">Pipeline</div>
+      <a href="dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7.5" height="8.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.5"/><rect x="3" y="14.5" width="7.5" height="6.5" rx="1.5"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.5"/></svg>Dashboard</a>
+      <a class="on" href="leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>All Leads<span class="count">1,284</span></a>
+      <a href="review-queue.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/><path d="M12 17V11"/></svg>Review Queue<span class="count">704</span></a>
+      <div class="nav-eyebrow">Intelligence</div>
+      <a href="scoring-rules.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>Scoring Rules</a>
+      <a href="campaigns.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 4 5-7 4 5"/><path d="M3 21h18"/></svg>Campaigns</a>
+      <div class="nav-eyebrow">Configuration</div>
+      <a href="automation.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 7H14a4 4 0 0 1 0 8h-2.5"/></svg>Automation</a>
+      <a href="team.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Team &amp; Routing</a>
+      <div class="nav-eyebrow">Agent view</div>
+      <a href="../agent/my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Agent portal</a>
+    </nav>
+    <div class="side-foot">
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Scoring rule set</span><span style="font-weight:700;color:var(--ink-700)">v7</span></div>
+      <div class="hint" style="margin-top:3px">Active since 24 Aug 2026</div>
+      <div class="who">
+        <div class="who-av">SR</div>
+        <div><div class="who-n">Shahriar Rahman</div><div class="who-r">Sales Manager</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">All Leads</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search leads…"></div>
+      <button type="button" class="btn sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Last 30 days<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="page-head">
+        <div class="t">
+          <h2>580 leads in the pipeline</h2>
+          <p>Qualified and nurture leads across every agent. The 704 disqualified leads sit in the Review Queue and are excluded from this view unless you filter them back in.</p>
+        </div>
+        <div class="acts">
+          <button type="button" class="btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 19h16"/></svg>Export CSV</button>
+          <button type="button" class="btn pri sm" data-modal="assign"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h11M11 7l5 5-5 5"/><path d="M20 5v14"/></svg>Bulk assign</button>
+        </div>
+      </div>
+
+      <section class="card mb5">
+        <div class="card-h">
+          <h2>Saved views</h2>
+          <span class="chip solid" data-filter-active="allleads" hidden>0 filters active</span>
+          <button type="button" class="btn xs" data-filter-clear="allleads" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6 6 18"/></svg>Clear filters</button>
+          <div class="spacer"></div>
+          <div class="filters" data-filter-group="allleads">
+            <button type="button" class="fchip on" data-filter="*">All pipeline<span class="n">12</span></button>
+            <button type="button" class="fchip" data-filter="hot">Hot<span class="n">5</span></button>
+            <button type="button" class="fchip" data-filter="warm">Warm<span class="n">5</span></button>
+            <button type="button" class="fchip" data-filter="nurture">Nurture<span class="n">2</span></button>
+            <button type="button" class="fchip" data-filter="unassigned">Unassigned<span class="n">1</span></button>
+            <button type="button" class="fchip" data-filter="sla">SLA breached<span class="n">2</span></button>
+            <button type="button" class="fchip" data-filter="nocontact">No contact 3+ days<span class="n">2</span></button>
+            <button type="button" class="fchip" data-filter="restored">Restored<span class="n">1</span></button>
+          </div>
+        </div>
+        <div class="card-b" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp-4)">
+          <label class="field"><span class="sr">Score band</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 20V9M10 20V4M16 20v-7"/></svg>
+            <select data-select-filter="allleads" data-facet="band"><option value="*">Score band — all</option><option value="hot">Hot (75–100)</option><option value="warm">Warm (55–74)</option><option value="nurture">Nurture (35–54)</option><option value="cold">Cold (0–34)</option></select>
+          </label>
+          <label class="field"><span class="sr">Stage</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 12h11M11 7l5 5-5 5"/></svg>
+            <select data-select-filter="allleads" data-facet="stage"><option value="*">Stage — all</option><option value="new">New</option><option value="contacted">Contacted</option><option value="qualified">Qualified</option><option value="visit-scheduled">Site Visit Scheduled</option><option value="visit-done">Site Visit Done</option><option value="negotiation">Negotiation</option><option value="booked">Booked</option><option value="lost">Lost</option></select>
+          </label>
+          <label class="field"><span class="sr">Campaign</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 17l5-6 4 4 5-7 4 5"/></svg>
+            <select data-select-filter="allleads" data-facet="campaign"><option value="*">Campaign — all</option><option value="fb">FB — Orchard Garden 3BR Sep</option><option value="google">Google Search — Apartment Chattogram</option><option value="event">Orchard Garden Launch Event</option><option value="billboard">Billboard — GEC Circle</option><option value="referral">Referral — Existing Owners</option></select>
+          </label>
+          <label class="field"><span class="sr">Assigned agent</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="8" r="3.2"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+            <select data-select-filter="allleads" data-facet="agent"><option value="*">Agent — all</option><option value="unassigned">Unassigned</option><option value="farhana">Farhana Akter</option><option value="imran">Imran Hossain</option><option value="sadia">Sadia Rahman</option><option value="mahbub">Mahbub Alam</option></select>
+          </label>
+          <label class="field"><span class="sr">Preferred project</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 21V8l8-5 8 5v13"/></svg>
+            <select data-select-filter="allleads" data-facet="project"><option value="*">Project — all</option><option value="orchard">Sanmar Orchard Garden</option><option value="ocean">Sanmar Ocean City</option><option value="sardinia">Sanmar Sardinia</option><option value="hyde">Sanmar Hyde Park</option><option value="avenue">Sanmar Avenue Tower</option></select>
+          </label>
+          <label class="field"><span class="sr">Budget band</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3v18M8 7h6a3 3 0 0 1 0 6h-4a3 3 0 0 0 0 6h6"/></svg>
+            <select data-select-filter="allleads" data-facet="budget"><option value="*">Budget — all</option><option value="under80l">Under ৳80 lakh</option><option value="80l-12">৳80 lakh – ৳1.2 crore</option><option value="12-16">৳1.2 – 1.6 crore</option><option value="above16">Above ৳1.6 crore</option></select>
+          </label>
+          <label class="field"><span class="sr">SLA status</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg>
+            <select data-select-filter="allleads" data-facet="sla"><option value="*">SLA — all</option><option value="within">Within target</option><option value="duetoday">Due today</option><option value="breached">Breached</option></select>
+          </label>
+          <label class="field"><span class="sr">Search name or phone</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="text" placeholder="Name or phone number" data-search="allleads">
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-h">
+          <h2>Pipeline</h2>
+          <span class="chip">Sorted by score, descending</span>
+          <div class="spacer"></div>
+          <span class="chip solid" data-selection-count hidden>0 selected</span>
+          <button type="button" class="btn sm" data-modal="assign">Assign to…</button>
+          <button type="button" class="btn sm" data-toast="Re-routing selected leads through the active routing rules">Re-route</button>
+          <button type="button" class="btn sm" data-toast="Selected leads re-scored against rule set v7">Re-score</button>
+        </div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th style="width:34px"><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></th>
+                <th>Lead</th><th>Score <svg style="display:inline-block;vertical-align:-2px" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="m6 15 6-6 6 6"/></svg></th>
+                <th>Verdict</th><th>Stage</th><th class="r">Budget</th><th>Preference</th><th>Campaign</th><th>Agent</th><th>Last touch</th><th>SLA</th><th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-filter-item="allleads" data-tags="hot" data-band="hot" data-stage="visit-scheduled" data-campaign="fb" data-agent="farhana" data-project="orchard" data-budget="12-16" data-sla="within">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Nusrat Jahan</span><span class="sub num">+8801711-2••-••8</span></a></td>
+                <td><span class="chip hot">86</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Site Visit Scheduled</td>
+                <td class="r">৳1.25–1.55 cr</td>
+                <td>3-bed · W. Khulshi</td>
+                <td>FB — Orchard Garden 3BR Sep</td>
+                <td>Farhana Akter</td>
+                <td>2h ago</td>
+                <td><span class="chip hot">Within</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr class="breach" data-filter-item="allleads" data-tags="hot sla" data-band="hot" data-stage="qualified" data-campaign="google" data-agent="farhana" data-project="ocean" data-budget="80l-12" data-sla="breached">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Md. Rafiqul Islam</span><span class="sub num">+8801819-4••-••1</span></a></td>
+                <td><span class="chip hot">81</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Qualified</td>
+                <td class="r">৳95 L–1.20 cr</td>
+                <td>3-bed · Nasirabad</td>
+                <td>Google — Apartment Chattogram</td>
+                <td>Farhana Akter</td>
+                <td>Never</td>
+                <td><span class="chip dang">Breached 3h</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="hot" data-band="hot" data-stage="negotiation" data-campaign="event" data-agent="farhana" data-project="orchard" data-budget="above16" data-sla="within">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Tanvir Ahmed</span><span class="sub num">+8801713-8••-••5</span></a></td>
+                <td><span class="chip hot">78</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Negotiation</td>
+                <td class="r">৳1.60–2.00 cr</td>
+                <td>4-bed · W. Khulshi</td>
+                <td>Orchard Garden Launch Event</td>
+                <td>Farhana Akter</td>
+                <td>Yesterday</td>
+                <td><span class="chip hot">Within</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="hot" data-band="hot" data-stage="visit-done" data-campaign="event" data-agent="imran" data-project="orchard" data-budget="12-16" data-sla="within">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Nasrin Sultana</span><span class="sub num">+8801799-3••-••4</span></a></td>
+                <td><span class="chip hot">77</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Site Visit Done</td>
+                <td class="r">৳1.30–1.65 cr</td>
+                <td>3-bed · W. Khulshi</td>
+                <td>Orchard Garden Launch Event</td>
+                <td>Imran Hossain</td>
+                <td>3h ago</td>
+                <td><span class="chip hot">Within</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr class="breach" data-filter-item="allleads" data-tags="hot unassigned sla" data-band="hot" data-stage="new" data-campaign="google" data-agent="unassigned" data-project="ocean" data-budget="12-16" data-sla="breached">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Golam Mostafa</span><span class="sub num">+8801886-1••-••9</span></a></td>
+                <td><span class="chip hot">76</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>New</td>
+                <td class="r">৳1.15–1.40 cr</td>
+                <td>3-bed · Nasirabad</td>
+                <td>Google — Apartment Chattogram</td>
+                <td><span class="chip warm">Unassigned</span></td>
+                <td>Never</td>
+                <td><span class="chip dang">Breached 1h</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="warm" data-band="warm" data-stage="contacted" data-campaign="referral" data-agent="farhana" data-project="sardinia" data-budget="80l-12" data-sla="within">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Shahnaz Parvin</span><span class="sub num">+8801755-6••-••3</span></a></td>
+                <td><span class="chip warm">72</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Contacted</td>
+                <td class="r">৳80 L–1.05 cr</td>
+                <td>3-bed · Panchlaish</td>
+                <td>Referral — Existing Owners</td>
+                <td>Farhana Akter</td>
+                <td>2d ago</td>
+                <td><span class="chip hot">Within</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="warm" data-band="warm" data-stage="visit-done" data-campaign="event" data-agent="farhana" data-project="orchard" data-budget="12-16" data-sla="within">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Abdul Karim Chowdhury</span><span class="sub num">+8801911-3••-••7</span></a></td>
+                <td><span class="chip warm">69</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Site Visit Done</td>
+                <td class="r">৳1.40–1.80 cr</td>
+                <td>4-bed · Khulshi</td>
+                <td>Orchard Garden Launch Event</td>
+                <td>Farhana Akter</td>
+                <td>4h ago</td>
+                <td><span class="chip hot">Within</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="warm" data-band="warm" data-stage="contacted" data-campaign="fb" data-agent="sadia" data-project="ocean" data-budget="80l-12" data-sla="within">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Jahangir Alam</span><span class="sub num">+8801740-9••-••2</span></a></td>
+                <td><span class="chip warm">67</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Contacted</td>
+                <td class="r">৳1.05–1.30 cr</td>
+                <td>3-bed · Agrabad</td>
+                <td>FB — Orchard Garden 3BR Sep</td>
+                <td>Sadia Rahman</td>
+                <td>Yesterday</td>
+                <td><span class="chip hot">Within</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="warm restored" data-band="warm" data-stage="qualified" data-campaign="fb" data-agent="farhana" data-project="ocean" data-budget="80l-12" data-sla="duetoday">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Farzana Haque</span><span class="sub num">+8801677-2••-••9</span></a><span class="sub"><span class="chip" style="padding:1px 7px;font-size:10.5px">Restored 04 Sep</span></span></td>
+                <td><span class="chip warm">66</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Qualified</td>
+                <td class="r">৳90 L–1.15 cr</td>
+                <td>3-bed · Agrabad</td>
+                <td>FB — Orchard Garden 3BR Sep</td>
+                <td>Farhana Akter</td>
+                <td>Yesterday</td>
+                <td><span class="chip warm">Due today</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="warm nocontact" data-band="warm" data-stage="contacted" data-campaign="google" data-agent="farhana" data-project="sardinia" data-budget="80l-12" data-sla="within">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Mizanur Rahman</span><span class="sub num">+8801552-7••-••4</span></a></td>
+                <td><span class="chip warm">63</span></td>
+                <td><span class="chip hot">Qualified</span></td>
+                <td>Contacted</td>
+                <td class="r">৳1.10–1.35 cr</td>
+                <td>3-bed · Nasirabad</td>
+                <td>Google — Apartment Chattogram</td>
+                <td>Farhana Akter</td>
+                <td>3d ago</td>
+                <td><span class="chip hot">Within</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="nurture" data-band="nurture" data-stage="new" data-campaign="billboard" data-agent="sequence" data-project="hyde" data-budget="under80l" data-sla="na">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Rokeya Khatun</span><span class="sub num">+8801928-6••-••1</span></a></td>
+                <td><span class="chip nur">51</span></td>
+                <td><span class="chip nur">Nurture</span></td>
+                <td>New</td>
+                <td class="r">৳70–90 lakh</td>
+                <td>2-bed · Halishahar</td>
+                <td>Billboard — GEC Circle</td>
+                <td><span class="chip">Sequence only</span></td>
+                <td>4d ago</td>
+                <td><span class="chip">n/a</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="allleads" data-tags="nurture nocontact" data-band="nurture" data-stage="new" data-campaign="billboard" data-agent="sequence" data-project="ocean" data-budget="under80l" data-sla="na">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="../agent/lead-detail.page.html"><span class="nm">Anwar Hossain</span><span class="sub num">+8801631-7••-••5</span></a></td>
+                <td><span class="chip nur">44</span></td>
+                <td><span class="chip nur">Nurture</span></td>
+                <td>New</td>
+                <td class="r">৳65–85 lakh</td>
+                <td>2-bed · Agrabad</td>
+                <td>Billboard — GEC Circle</td>
+                <td><span class="chip">Sequence only</span></td>
+                <td>6d ago</td>
+                <td><span class="chip">n/a</span></td>
+                <td><a class="btn xs" href="../agent/lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-empty="allleads" hidden><td colspan="12">
+                <div class="empty" style="padding:var(--sp-8) var(--sp-5)">
+                  <div class="empty-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+                  <b>No leads match this filter</b>
+                  <p>Try a different saved view, or clear the filter to see the full pipeline.</p>
+                </div></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl-foot">
+          <span>Showing <b data-filter-count="allleads">12</b> of 580 leads in the pipeline</span>
+          <span class="chip cold">704 disqualified leads are in the Review Queue</span>
+          <div class="pager">
+            <button type="button" aria-label="Previous page">‹</button>
+            <button type="button" class="on">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">…</button>
+            <button type="button">49</button>
+            <button type="button" aria-label="Next page">›</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>

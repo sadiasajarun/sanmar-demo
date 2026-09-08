@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campaign Performance — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">Pipeline</div>
+      <a href="dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7.5" height="8.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.5"/><rect x="3" y="14.5" width="7.5" height="6.5" rx="1.5"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.5"/></svg>Dashboard</a>
+      <a href="leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>All Leads<span class="count">1,284</span></a>
+      <a href="review-queue.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/><path d="M12 17V11"/></svg>Review Queue<span class="count">704</span></a>
+      <div class="nav-eyebrow">Intelligence</div>
+      <a href="scoring-rules.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>Scoring Rules</a>
+      <a class="on" href="campaigns.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 4 5-7 4 5"/><path d="M3 21h18"/></svg>Campaigns</a>
+      <div class="nav-eyebrow">Configuration</div>
+      <a href="automation.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 7H14a4 4 0 0 1 0 8h-2.5"/></svg>Automation</a>
+      <a href="team.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Team &amp; Routing</a>
+      <div class="nav-eyebrow">Agent view</div>
+      <a href="../agent/my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Agent portal</a>
+    </nav>
+    <div class="side-foot">
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Scoring rule set</span><span style="font-weight:700;color:var(--ink-700)">v7</span></div>
+      <div class="hint" style="margin-top:3px">Active since 24 Aug 2026</div>
+      <div class="who">
+        <div class="who-av">SR</div>
+        <div><div class="who-n">Shahriar Rahman</div><div class="who-r">Sales Manager</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">Campaign Performance</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search leads…"></div>
+      <button type="button" class="btn sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Last 30 days<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="page-head">
+        <div class="t">
+          <h2>Cost per qualified lead, not cost per lead</h2>
+          <p>A campaign that delivers 486 leads at ৳864 each looks efficient until you notice 62% of them are noise. Every figure below is drilled to the leads behind it.</p>
+        </div>
+        <div class="acts">
+          <button type="button" class="btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 19h16"/></svg>Export for the agency</button>
+        </div>
+      </div>
+
+      <div class="g4 mb5">
+        <div class="kpi"><div><div class="eyebrow">Total spend</div><div class="kpi-v">৳11.2<small> lakh</small></div></div><span class="kpi-d flat">Across 5 active campaigns</span></div>
+        <div class="kpi"><div><div class="eyebrow">Cost per lead</div><div class="kpi-v">৳872</div></div><span class="kpi-d flat">1,284 leads — the flattering number</span></div>
+        <div class="kpi"><div><div class="eyebrow">Cost per qualified lead</div><div class="kpi-v">৳3,590</div></div><span class="kpi-d up"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>−৳420 vs Aug · the honest one</span></div>
+        <div class="kpi"><div><div class="eyebrow">Cost per booking</div><div class="kpi-v">৳53,333</div></div><span class="kpi-d flat">21 bookings · ৳27.4 cr contract value</span></div>
+      </div>
+
+      <div class="g4 mb5">
+        <div class="kpi"><div><div class="eyebrow">Facebook</div><div class="kpi-v">৳4,565</div></div><span class="kpi-d down">CPQL · 486 leads · 18.9% qualified</span></div>
+        <div class="kpi"><div><div class="eyebrow">Google</div><div class="kpi-v">৳3,654</div></div><span class="kpi-d flat">CPQL · 214 leads · 36.4% qualified</span></div>
+        <div class="kpi"><div><div class="eyebrow">Events</div><div class="kpi-v">৳2,623</div></div><span class="kpi-d up">CPQL · 138 leads · 44.2% qualified</span></div>
+        <div class="kpi"><div><div class="eyebrow">Referral</div><div class="kpi-v">৳405</div></div><span class="kpi-d up">CPQL · 134 leads · 27.6% qualified</span></div>
+      </div>
+
+      <section class="card mb5">
+        <div class="card-h">
+          <h2>All campaigns</h2>
+          <span class="chip">Sorted by cost per qualified lead</span>
+          <div class="spacer"></div>
+          <div class="filters" data-filter-group="camp">
+            <button type="button" class="fchip on" data-filter="*">All channels<span class="n">5</span></button>
+            <button type="button" class="fchip" data-filter="facebook">Facebook<span class="n">1</span></button>
+            <button type="button" class="fchip" data-filter="google">Google<span class="n">1</span></button>
+            <button type="button" class="fchip" data-filter="event">Event<span class="n">1</span></button>
+            <button type="button" class="fchip" data-filter="ooh">OOH<span class="n">1</span></button>
+            <button type="button" class="fchip" data-filter="referral">Referral<span class="n">1</span></button>
+          </div>
+        </div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>Campaign</th><th>Channel</th><th class="r">Spend</th><th class="r">Leads</th><th class="r">CPL</th>
+                <th class="r">Qualified</th><th class="r">Qualified %</th><th class="r">Nurture</th><th class="r">Garbage %</th>
+                <th class="r">Visits</th><th class="r">Booked</th><th class="r">CPQL</th><th>Verdict</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-filter-item="camp" data-tags="referral">
+                <td class="nm"><a href="leads.page.html">Referral — Existing Owners</a><span class="sub">Rolling · owner introductions</span></td>
+                <td>Referral</td><td class="r">৳15,000</td><td class="r">134</td><td class="r">৳112</td>
+                <td class="r">37</td><td class="r">27.6%</td><td class="r">38</td><td class="r">44.0%</td>
+                <td class="r">18</td><td class="r">6</td><td class="r" style="font-weight:700;color:var(--hot-fg)">৳405</td>
+                <td><span class="chip hot">Scale up</span></td>
+              </tr>
+              <tr data-filter-item="camp" data-tags="event">
+                <td class="nm"><a href="leads.page.html">Orchard Garden Launch Event</a><span class="sub">14–22 Aug · Yakub Future Park</span></td>
+                <td>Event</td><td class="r">৳1,60,000</td><td class="r">138</td><td class="r">৳1,159</td>
+                <td class="r">61</td><td class="r">44.2%</td><td class="r">34</td><td class="r">31.2%</td>
+                <td class="r">31</td><td class="r">8</td><td class="r" style="font-weight:700;color:var(--hot-fg)">৳2,623</td>
+                <td><span class="chip hot">Scale up</span></td>
+              </tr>
+              <tr data-filter-item="camp" data-tags="google">
+                <td class="nm"><a href="leads.page.html">Google Search — Apartment Chattogram</a><span class="sub">Always on · exact + phrase match</span></td>
+                <td>Google</td><td class="r">৳2,85,000</td><td class="r">214</td><td class="r">৳1,332</td>
+                <td class="r">78</td><td class="r">36.4%</td><td class="r">54</td><td class="r">38.3%</td>
+                <td class="r">27</td><td class="r">4</td><td class="r" style="font-weight:700">৳3,654</td>
+                <td><span class="chip warm">Hold</span></td>
+              </tr>
+              <tr data-filter-item="camp" data-tags="facebook">
+                <td class="nm"><a href="leads.page.html">FB — Orchard Garden 3BR Sep</a><span class="sub">01–30 Sep · lead form · Chattogram 25–55</span></td>
+                <td>Facebook</td><td class="r">৳4,20,000</td><td class="r">486</td><td class="r">৳864</td>
+                <td class="r">92</td><td class="r">18.9%</td><td class="r">92</td><td class="r">62.1%</td>
+                <td class="r">17</td><td class="r">3</td><td class="r" style="font-weight:700">৳4,565</td>
+                <td><span class="chip warm">Retarget</span></td>
+              </tr>
+              <tr data-filter-item="camp" data-tags="ooh">
+                <td class="nm"><a href="leads.page.html">Billboard — GEC Circle</a><span class="sub">Aug–Sep · call-tracking number</span></td>
+                <td>OOH</td><td class="r">৳2,40,000</td><td class="r">312</td><td class="r">৳769</td>
+                <td class="r">44</td><td class="r">14.1%</td><td class="r">50</td><td class="r">71.5%</td>
+                <td class="r">3</td><td class="r">0</td><td class="r" style="font-weight:700;color:var(--danger-fg)">৳5,455</td>
+                <td><span class="chip dang">Review</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl-foot">
+          <span><b data-filter-count="camp">5</b> campaigns · ৳11,20,000 spend · 1,284 leads · 312 qualified · 21 booked</span>
+          <span class="chip">Blended CPQL ৳3,590</span>
+        </div>
+      </section>
+
+      <div class="split mb5">
+        <section class="card">
+          <div class="card-h"><h2>Qualified rate by campaign</h2><div class="spacer"></div><span class="chip">Higher is better</span></div>
+          <div class="card-b">
+            <div class="fn">
+              <div class="fn-row"><span>Launch Event</span><div class="fn-bar" style="width:100%;background:var(--hot-fg)">44.2%</div><span class="fn-drop">61 of 138</span></div>
+              <div class="fn-row"><span>Google Search</span><div class="fn-bar" style="width:82%;background:var(--hot-fg)">36.4%</div><span class="fn-drop">78 of 214</span></div>
+              <div class="fn-row"><span>Referral</span><div class="fn-bar" style="width:62%;background:#F59E0B;color:var(--ink-900)">27.6%</div><span class="fn-drop">37 of 134</span></div>
+              <div class="fn-row"><span>Facebook</span><div class="fn-bar" style="width:43%;background:#F59E0B;color:var(--ink-900)">18.9%</div><span class="fn-drop">92 of 486</span></div>
+              <div class="fn-row"><span>Billboard</span><div class="fn-bar" style="width:32%;background:var(--cold-bd);color:var(--ink-900)">14.1%</div><span class="fn-drop">44 of 312</span></div>
+            </div>
+            <p class="hint" style="margin-top:var(--sp-5);line-height:1.7">
+              The launch event is the best lead source Sanmar has and the smallest line in the budget. Facebook
+              produces the most volume and the second-worst quality — it is buying reach, not buyers.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h"><h2>Garbage reason mix per campaign</h2><div class="spacer"></div><span class="chip cold">Diagnostic</span></div>
+          <div class="card-b" style="border-bottom:1px solid var(--border);font-size:13.5px;color:var(--ink-500);line-height:1.7">
+            The <i>reason</i> a campaign produces garbage tells you what to fix. Mostly wrong numbers is a data-capture
+            problem. Mostly below-budget is a targeting problem. They need completely different responses.
+          </div>
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th>Campaign</th><th>Dominant reason</th><th class="r">Share</th><th>What it means</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="nm">Billboard — GEC Circle</td>
+                  <td><span class="chip cold">Wrong number</span></td>
+                  <td class="r">51%</td>
+                  <td>Mis-dials from a painted number. Data-capture problem — consider a shorter vanity number.</td>
+                </tr>
+                <tr>
+                  <td class="nm">FB — Orchard Garden 3BR</td>
+                  <td><span class="chip cold">Below budget floor</span></td>
+                  <td class="r">38%</td>
+                  <td>Targeting problem. The creative shows a premium unit but the audience is too broad.</td>
+                </tr>
+                <tr>
+                  <td class="nm">Google Search</td>
+                  <td><span class="chip cold">No purchase intent</span></td>
+                  <td class="r">44%</td>
+                  <td>Research-stage traffic. Normal for search — the nurture sequence is the right answer.</td>
+                </tr>
+                <tr>
+                  <td class="nm">Referral</td>
+                  <td><span class="chip cold">Duplicate</span></td>
+                  <td class="r">36%</td>
+                  <td>Existing owners referring people already in the pipeline. Harmless.</td>
+                </tr>
+                <tr>
+                  <td class="nm">Launch Event</td>
+                  <td><span class="chip cold">No purchase intent</span></td>
+                  <td class="r">40%</td>
+                  <td>Walk-in browsers. The lowest garbage rate of any source at 31.2%.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="card-h"><h2>Where the money should move</h2><div class="spacer"></div><span class="chip">Modelled on current CPQL</span></div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead><tr><th>Campaign</th><th class="r">Current spend</th><th class="r">Current qualified</th><th>Recommendation</th><th class="r">Proposed spend</th><th class="r">Projected qualified</th></tr></thead>
+            <tbody>
+              <tr><td class="nm">Orchard Garden Launch Event</td><td class="r">৳1,60,000</td><td class="r">61</td><td><span class="chip hot">Run a second event in October</span></td><td class="r">৳3,20,000</td><td class="r">122</td></tr>
+              <tr><td class="nm">Referral — Existing Owners</td><td class="r">৳15,000</td><td class="r">37</td><td><span class="chip hot">Raise the owner incentive</span></td><td class="r">৳60,000</td><td class="r">88</td></tr>
+              <tr><td class="nm">Google Search — Apartment Chattogram</td><td class="r">৳2,85,000</td><td class="r">78</td><td><span class="chip warm">Hold, tighten match types</span></td><td class="r">৳2,85,000</td><td class="r">84</td></tr>
+              <tr><td class="nm">FB — Orchard Garden 3BR Sep</td><td class="r">৳4,20,000</td><td class="r">92</td><td><span class="chip warm">Cut 30%, add an income filter</span></td><td class="r">৳2,95,000</td><td class="r">78</td></tr>
+              <tr><td class="nm">Billboard — GEC Circle</td><td class="r">৳2,40,000</td><td class="r">44</td><td><span class="chip dang">Pause until the number is fixed</span></td><td class="r">৳60,000</td><td class="r">14</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl-foot">
+          <span>Same total spend of ৳11,20,000 · projected <b>386 qualified leads</b> instead of 312</span>
+          <span class="chip hot">Projected CPQL ৳2,902 · a ৳688 improvement</span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>

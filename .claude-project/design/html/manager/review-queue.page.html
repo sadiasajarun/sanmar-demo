@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garbage Review Queue — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">Pipeline</div>
+      <a href="dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7.5" height="8.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.5"/><rect x="3" y="14.5" width="7.5" height="6.5" rx="1.5"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.5"/></svg>Dashboard</a>
+      <a href="leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>All Leads<span class="count">1,284</span></a>
+      <a class="on" href="review-queue.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/><path d="M12 17V11"/></svg>Review Queue<span class="count">704</span></a>
+      <div class="nav-eyebrow">Intelligence</div>
+      <a href="scoring-rules.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>Scoring Rules</a>
+      <a href="campaigns.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 4 5-7 4 5"/><path d="M3 21h18"/></svg>Campaigns</a>
+      <div class="nav-eyebrow">Configuration</div>
+      <a href="automation.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 7H14a4 4 0 0 1 0 8h-2.5"/></svg>Automation</a>
+      <a href="team.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Team &amp; Routing</a>
+      <div class="nav-eyebrow">Agent view</div>
+      <a href="../agent/my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Agent portal</a>
+    </nav>
+    <div class="side-foot">
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Scoring rule set</span><span style="font-weight:700;color:var(--ink-700)">v7</span></div>
+      <div class="hint" style="margin-top:3px">Active since 24 Aug 2026</div>
+      <div class="who">
+        <div class="who-av">SR</div>
+        <div><div class="who-n">Shahriar Rahman</div><div class="who-r">Sales Manager</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">Garbage Review Queue</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search leads…"></div>
+      <button type="button" class="btn sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Last 30 days<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="page-head">
+        <div class="t">
+          <h2>Nothing here has been deleted</h2>
+          <p>Every lead the engine disqualified is kept, with the reason it was binned and the evidence that produced it. Restoring a lead puts it straight back into routing, and the correction is recorded against the active rule set — that restore rate is how you know whether the model is calibrated.</p>
+        </div>
+        <div class="acts">
+          <button type="button" class="btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 19h16"/></svg>Export CSV</button>
+          <a class="btn sm" href="scoring-rules.page.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>Tune the rules</a>
+        </div>
+      </div>
+
+      <div class="g4 mb5">
+        <div class="kpi"><div><div class="eyebrow">In the queue</div><div class="kpi-v">704</div></div><span class="kpi-d flat">Last 30 days · 54.8% of intake</span></div>
+        <div class="kpi"><div><div class="eyebrow">Restored this month</div><div class="kpi-v" style="color:var(--hot-fg)">27</div></div><span class="kpi-d flat">18 went on to be contacted</span></div>
+        <div class="kpi"><div><div class="eyebrow">Restore rate</div><div class="kpi-v">3.8<small>%</small></div></div><span class="kpi-d up"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>−1.4 pts since v7</span></div>
+        <div class="kpi"><div><div class="eyebrow">Restored → booked</div><div class="kpi-v">2</div></div><span class="kpi-d flat">৳2.6 crore that would have been lost</span></div>
+      </div>
+
+      <div class="split">
+        <section class="card">
+          <div class="card-h">
+            <h2>Disqualified leads</h2>
+            <div class="spacer"></div>
+            <div class="filters" data-filter-group="bin">
+              <button type="button" class="fchip on" data-filter="*">All<span class="n">10</span></button>
+              <button type="button" class="fchip" data-filter="budget">Below budget<span class="n">3</span></button>
+              <button type="button" class="fchip" data-filter="nointent">No intent<span class="n">2</span></button>
+              <button type="button" class="fchip" data-filter="wrongnumber">Wrong number<span class="n">1</span></button>
+              <button type="button" class="fchip" data-filter="outofarea">Out of area<span class="n">1</span></button>
+              <button type="button" class="fchip" data-filter="duplicate">Duplicate<span class="n">1</span></button>
+              <button type="button" class="fchip" data-filter="jobseeker">Job seeker<span class="n">1</span></button>
+              <button type="button" class="fchip" data-filter="spam">Spam or test<span class="n">1</span></button>
+            </div>
+          </div>
+          <div class="card-b" style="display:flex;gap:var(--sp-3);align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--border)">
+            <span class="chip solid" data-selection-count hidden>0 selected</span>
+            <button type="button" class="btn pri sm" data-modal="restore" data-name="the selected leads"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11a8 8 0 1 0-2.3 6.3"/><path d="M20 5v6h-6"/></svg>Restore selected</button>
+            <button type="button" class="btn sm" data-toast="Confirmed as garbage — no correction logged against rule set v7">Confirm as garbage</button>
+            <div class="spacer"></div>
+            <span class="hint">Restores are logged against rule set v7</span>
+          </div>
+          <div class="scroll">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th style="width:34px"><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></th>
+                  <th>Lead</th><th>Score</th><th>Reason</th><th>Campaign</th><th>Binned</th><th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-filter-item="bin" data-tags="budget">
+                  <td><span class="cbx" role="checkbox" aria-checked="true" tabindex="0"></span></td>
+                  <td><span class="nm">Sabbir Ahmed</span><span class="sub num">+8801717-5••-••3</span></td>
+                  <td><span class="chip cold">31</span></td>
+                  <td><span class="chip cold">Below budget floor</span></td>
+                  <td>Billboard — GEC Circle</td>
+                  <td>Today 09:12</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Sabbir Ahmed">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="nointent">
+                  <td><span class="cbx" role="checkbox" aria-checked="true" tabindex="0"></span></td>
+                  <td><span class="nm">Ruma Akter</span><span class="sub num">+8801866-2••-••7</span></td>
+                  <td><span class="chip cold">28</span></td>
+                  <td><span class="chip cold">No purchase intent</span></td>
+                  <td>FB — Orchard Garden 3BR Sep</td>
+                  <td>Today 08:40</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Ruma Akter">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="wrongnumber">
+                  <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                  <td><span class="nm">Unknown caller</span><span class="sub num">+8801534-8••-••1</span></td>
+                  <td><span class="chip cold">6</span></td>
+                  <td><span class="chip cold">Wrong number</span></td>
+                  <td>Billboard — GEC Circle</td>
+                  <td>Today 08:05</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Unknown caller">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="outofarea">
+                  <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                  <td><span class="nm">Rahim Uddin</span><span class="sub num">+8801912-4••-••8</span></td>
+                  <td><span class="chip cold">22</span></td>
+                  <td><span class="chip cold">Out of service area</span></td>
+                  <td>Google — Apartment Chattogram</td>
+                  <td>Yesterday 17:31</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Rahim Uddin">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="duplicate">
+                  <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                  <td><span class="nm">Tahmina Yasmin</span><span class="sub num">+8801755-6••-••3</span></td>
+                  <td><span class="chip cold">34</span></td>
+                  <td><span class="chip cold">Duplicate</span></td>
+                  <td>FB — Orchard Garden 3BR Sep</td>
+                  <td>Yesterday 16:04</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Tahmina Yasmin">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="jobseeker">
+                  <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                  <td><span class="nm">Shafiqul Bari</span><span class="sub num">+8801611-9••-••2</span></td>
+                  <td><span class="chip cold">19</span></td>
+                  <td><span class="chip cold">Job seeker</span></td>
+                  <td>FB — Orchard Garden 3BR Sep</td>
+                  <td>Yesterday 14:47</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Shafiqul Bari">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="budget">
+                  <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                  <td><span class="nm">Nurul Absar</span><span class="sub num">+8801847-3••-••6</span></td>
+                  <td><span class="chip cold">29</span></td>
+                  <td><span class="chip cold">Below budget floor</span></td>
+                  <td>Billboard — GEC Circle</td>
+                  <td>Yesterday 12:19</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Nurul Absar">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="spam">
+                  <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                  <td><span class="nm">Unknown caller</span><span class="sub num">+8801399-1••-••0</span></td>
+                  <td><span class="chip cold">3</span></td>
+                  <td><span class="chip cold">Spam or test</span></td>
+                  <td>Billboard — GEC Circle</td>
+                  <td>Yesterday 11:02</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Unknown caller">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="nointent">
+                  <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                  <td><span class="nm">Kazi Delwar</span><span class="sub num">+8801723-7••-••4</span></td>
+                  <td><span class="chip cold">26</span></td>
+                  <td><span class="chip cold">No purchase intent</span></td>
+                  <td>Google — Apartment Chattogram</td>
+                  <td>06 Sep 15:53</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Kazi Delwar">Restore</button></td>
+                </tr>
+                <tr data-filter-item="bin" data-tags="budget">
+                  <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                  <td><span class="nm">Momtaz Begum</span><span class="sub num">+8801955-2••-••9</span></td>
+                  <td><span class="chip cold">33</span></td>
+                  <td><span class="chip cold">Below budget floor</span></td>
+                  <td>Referral — Existing Owners</td>
+                  <td>06 Sep 10:26</td>
+                  <td><button type="button" class="btn xs" data-modal="restore" data-name="Momtaz Begum">Restore</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tbl-foot">
+            <span>Showing <b data-filter-count="bin">10</b> of 704 disqualified leads</span>
+            <div class="pager">
+              <button type="button" aria-label="Previous page">‹</button>
+              <button type="button" class="on">1</button>
+              <button type="button">2</button>
+              <button type="button">3</button>
+              <button type="button">…</button>
+              <button type="button">71</button>
+              <button type="button" aria-label="Next page">›</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="stack">
+          <section class="card">
+            <div class="card-h">
+              <h2>Evidence · Sabbir Ahmed</h2>
+              <div class="spacer"></div>
+              <span class="chip cold">31 · Cold</span>
+            </div>
+            <div class="card-b">
+              <dl class="kv">
+                <dt>Phone</dt><dd class="num">+8801717-5••-••3</dd>
+                <dt>Campaign</dt><dd>Billboard — GEC Circle</dd>
+                <dt>Reason</dt><dd><span class="chip cold">Below budget floor</span></dd>
+                <dt>Stated budget</dt><dd><b class="num">৳38–46 lakh</b></dd>
+                <dt>Floor in v7</dt><dd class="num">৳45 lakh</dd>
+                <dt>Binned</dt><dd>Today, 09:12 · automatic</dd>
+              </dl>
+            </div>
+            <div class="ftable-wrap">
+              <table class="ftable">
+                <thead><tr><th>Factor group</th><th class="r">Weight</th><th class="r">Points</th></tr></thead>
+                <tbody>
+                  <tr><td>AI conversation signals</td><td class="r">45</td><td class="r">21.4</td></tr>
+                  <tr><td>Business fit</td><td class="r">45</td><td class="r">4.8</td></tr>
+                  <tr><td>Behavioural</td><td class="r">10</td><td class="r">4.6</td></tr>
+                  <tr class="tot"><td>Composite</td><td class="r">100</td><td class="r">30.8</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="why">
+              <div class="eyebrow">Why it was binned</div>
+              <ul>
+                <li><span class="mk m">−</span><div><b>Budget below the inventory floor.</b> Top of his range is ৳46 lakh; the cheapest 2-bed in the portfolio is ৳72 lakh. Business fit scored 4.8 of 45.</div></li>
+                <li><span class="mk m">−</span><div><b>No location preference given</b> and no timeline stated on the call.</div></li>
+                <li><span class="mk p">+</span><div><b>Engagement was genuinely good</b> — 4m 20s, 5 questions. This is a real buyer, just not for our stock.</div></li>
+              </ul>
+            </div>
+            <div class="card-b" style="border-top:1px solid var(--border);background:var(--ai-050)">
+              <div class="eyebrow" style="margin-bottom:9px">Call excerpt · VoiceIQ</div>
+              <p class="summary" style="font-size:13.5px">Caller saw the GEC Circle billboard and asked what the cheapest available flat is. When quoted the 2-bed range he said his maximum is around ৳45 lakh and asked whether there is anything in Halishahar or Bakalia at that level. Polite throughout, asked five questions, and requested a call back if anything cheaper becomes available.</p>
+            </div>
+            <div class="ruleline">
+              <span>Hard disqualifier <b style="color:var(--ink-700)">BUDGET_BELOW_MINIMUM</b> · rule set v7</span>
+              <span style="display:flex;gap:8px">
+                <button type="button" class="btn sm" data-toast="Confirmed as garbage — the engine was right on this one">Confirm garbage</button>
+                <button type="button" class="btn pri sm" data-modal="restore" data-name="Sabbir Ahmed"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11a8 8 0 1 0-2.3 6.3"/><path d="M20 5v6h-6"/></svg>Restore</button>
+              </span>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-h"><h2>Restore this lead</h2><div class="spacer"></div><span class="chip">Dialog preview</span></div>
+            <div class="card-b">
+              <p class="hint" style="margin-bottom:var(--sp-4);line-height:1.7">Choose the verdict the lead should have had. If you pick Qualified it routes to an agent immediately under the normal rules.</p>
+              <div class="filters" style="margin-bottom:var(--sp-4)">
+                <button type="button" class="fchip on">Qualified — route to an agent</button>
+                <button type="button" class="fchip">Nurture — sequence only</button>
+              </div>
+              <label class="field" style="align-items:flex-start">
+                <span class="sr">Reason for restoring</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" style="margin-top:3px"><path d="M12 5v14M5 12h14"/></svg>
+                <input type="text" placeholder="Why was the engine wrong? (recorded as model feedback)">
+              </label>
+              <div style="display:flex;gap:8px;margin-top:var(--sp-4);flex-wrap:wrap">
+                <button type="button" class="btn pri" data-toast="Sabbir Ahmed restored as Qualified — correction logged against rule set v7">Restore lead</button>
+                <button type="button" class="btn">Cancel</button>
+              </div>
+              <div style="margin-top:var(--sp-5);padding:var(--sp-4);background:var(--warm-bg);border:1px solid var(--warm-bd);border-radius:var(--r-md);font-size:13px;line-height:1.6">
+                <b style="font-family:var(--font-display);color:var(--warm-fg)">This is feedback, not just an undo.</b><br>
+                27 restores against rule set v7 in the last 30 days, 19 of them for <b>below budget floor</b>. That
+                pattern is the signal that the ৳45 lakh floor is set too high — <a href="scoring-rules.page.html" style="color:var(--brand-700);font-weight:700">review it on the Scoring Rules page</a>.
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-h"><h2>Corrections by reason</h2><div class="spacer"></div><span class="chip">Last 30 days</span></div>
+            <div class="rl-row"><span style="width:118px">Below budget</span><div class="rl-bar"><i style="width:100%;background:var(--warm-bd)"></i></div><span class="rl-n">19</span></div>
+            <div class="rl-row"><span style="width:118px">No intent</span><div class="rl-bar"><i style="width:26%"></i></div><span class="rl-n">5</span></div>
+            <div class="rl-row"><span style="width:118px">Duplicate</span><div class="rl-bar"><i style="width:11%"></i></div><span class="rl-n">2</span></div>
+            <div class="rl-row"><span style="width:118px">Out of area</span><div class="rl-bar"><i style="width:5%"></i></div><span class="rl-n">1</span></div>
+            <div class="rl-row"><span style="width:118px">Wrong number</span><div class="rl-bar"><i style="width:0%"></i></div><span class="rl-n">0</span></div>
+            <div class="tbl-foot"><span class="hint">Wrong-number detection has never been overturned — that rule is safe to leave alone.</span></div>
+          </section>
+        </div>
+      </div>
+
+      <section class="card" style="margin-top:var(--sp-5)">
+        <div class="card-h"><h2>When the queue is clear</h2></div>
+        <div class="empty">
+          <div class="empty-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/><path d="m10 12 4 4M14 12l-4 4"/></svg></div>
+          <b>No leads awaiting review</b>
+          <p>Everything the engine disqualified in this period has been checked. New entries appear here within seconds of being binned.</p>
+          <a class="btn sm" href="dashboard.page.html">Back to dashboard</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>

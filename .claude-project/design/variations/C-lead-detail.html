@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variation C · Lead Detail — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--brand-900:#1E3A8A;--brand-800:#1D4ED8;--brand-700:#2563EB;--brand-600:#3B82F6;--brand-100:#DBEAFE;--brand-050:#EFF6FF;
+--ai-700:#6D28D9;--ai-600:#7C3AED;--ai-100:#EDE9FE;--ai-050:#F5F3FF;
+--ai-grad:linear-gradient(135deg,#2563EB 0%,#7C3AED 100%);
+--canvas:#FFFFFF;--canvas-2:#F8FAFC;--surface:#FFFFFF;--surface-2:#F8FAFC;
+--sidebar-bg:#FFFFFF;--sidebar-fg:#475569;--sidebar-active-bg:#EFF6FF;
+--ink-900:#020617;--ink-700:#0F172A;--ink-500:#64748B;--ink-400:#94A3B8;--border:#E2E8F0;--border-strong:#CBD5E1;
+--hot-fg:#047857;--hot-bg:#ECFDF5;--hot-bd:#A7F3D0;
+--warm-fg:#B45309;--warm-bg:#FFFBEB;--warm-bd:#FDE68A;
+--nurture-fg:#1D4ED8;--nurture-bg:#EFF6FF;--nurture-bd:#BFDBFE;
+--cold-fg:#475569;--cold-bg:#F1F5F9;--cold-bd:#CBD5E1;
+--danger-fg:#B91C1C;--danger-bg:#FEF2F2;--danger-bd:#FECACA;
+--success-fg:#047857;--success-bg:#ECFDF5;--warning-fg:#B45309;--warning-bg:#FFFBEB;
+--font-display:'Plus Jakarta Sans','Inter',-apple-system,'Segoe UI',system-ui,sans-serif;
+--font-body:'Inter',-apple-system,'Segoe UI',Roboto,system-ui,sans-serif;
+--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;
+--r-sm:8px;--r-md:12px;--r-lg:16px;--r-xl:24px;--r-pill:999px;
+--sh-1:0 1px 2px rgba(15,23,42,.05);
+--sh-2:0 1px 3px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.06);
+--sh-3:0 4px 8px rgba(15,23,42,.05),0 20px 48px rgba(15,23,42,.10);
+--sh-ai:0 4px 20px rgba(124,58,237,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);font-size:14px;line-height:1.6;color:var(--ink-700);background:var(--canvas-2);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;cursor:pointer}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+svg{display:block;flex:none}
+.num{font-variant-numeric:tabular-nums}
+
+.app{display:flex;min-height:100vh}
+.side{width:256px;flex:none;background:var(--sidebar-bg);border-right:1px solid var(--border);display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.brand{display:flex;align-items:center;gap:11px;padding:20px var(--sp-5)}
+.brand-mark{width:34px;height:34px;border-radius:var(--r-sm);background:var(--ai-grad);display:grid;place-items:center;color:#fff;font-family:var(--font-display);font-weight:800;font-size:16px}
+.brand-name{font-family:var(--font-display);font-weight:800;font-size:15.5px;letter-spacing:-.02em;color:var(--ink-900)}
+.brand-sub{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-400);font-weight:700;margin-top:1px}
+.nav{padding:var(--sp-2) var(--sp-3);flex:1}
+.nav-eyebrow{font-family:var(--font-display);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-400);padding:0 var(--sp-3);margin:var(--sp-5) 0 var(--sp-2)}
+.nav-eyebrow:first-child{margin-top:var(--sp-2)}
+.nav a{display:flex;align-items:center;gap:11px;padding:10px var(--sp-3);border-radius:var(--r-sm);font-size:14px;font-weight:500;color:var(--sidebar-fg);transition:background .18s cubic-bezier(.2,.8,.2,1),color .18s}
+.nav a:hover{background:var(--surface-2);color:var(--ink-700)}
+.nav a.on{background:var(--sidebar-active-bg);color:var(--brand-700);font-weight:600}
+.side-foot{padding:var(--sp-4) var(--sp-5);border-top:1px solid var(--border);font-size:12.5px}
+.avail{display:flex;align-items:center;gap:7px;margin-bottom:10px;font-weight:500}
+.dot{width:8px;height:8px;border-radius:50%;background:#10B981;flex:none}
+.cap-bar{height:6px;border-radius:var(--r-pill);background:var(--cold-bg);overflow:hidden;margin:7px 0 4px}
+.cap-fill{height:100%;background:var(--ai-grad);width:60%;border-radius:var(--r-pill)}
+.who{display:flex;align-items:center;gap:10px;margin-top:14px}
+.who-av{width:34px;height:34px;border-radius:50%;background:var(--brand-100);color:var(--brand-800);display:grid;place-items:center;font-size:12px;font-weight:700;flex:none;font-family:var(--font-display)}
+
+.main{flex:1;min-width:0}
+.top{height:64px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-4);padding:0 var(--sp-8);position:sticky;top:0;z-index:20}
+.search{flex:1;max-width:420px;display:flex;align-items:center;gap:9px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);padding:9px 13px;color:var(--ink-400);font-size:13.5px}
+.search input{border:none;background:none;outline:none;font:inherit;color:var(--ink-700);width:100%}
+.top-spacer{flex:1}
+.pill-alert{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:var(--r-pill);background:var(--danger-bg);color:var(--danger-fg);border:1px solid var(--danger-bd)}
+.icon-btn{width:38px;height:38px;border-radius:var(--r-sm);display:grid;place-items:center;color:var(--ink-500);transition:background .18s}
+.icon-btn:hover{background:var(--surface-2)}
+.content{padding:var(--sp-8);max-width:1440px}
+
+.crumb{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-500);margin-bottom:var(--sp-4)}
+.crumb a:hover{color:var(--brand-700)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--sh-2)}
+.card.ai{border-color:var(--ai-100);box-shadow:var(--sh-ai)}
+.card-h{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-4) var(--sp-5);border-bottom:1px solid var(--border)}
+.card-h h2{font-family:var(--font-display);font-size:16px;font-weight:700;letter-spacing:-.01em}
+.card-b{padding:var(--sp-5)}
+.eyebrow{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-400)}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:4px 11px;border-radius:var(--r-pill);border:1px solid var(--border);background:var(--surface-2);color:var(--ink-500);white-space:nowrap}
+.chip.hot{background:var(--hot-bg);color:var(--hot-fg);border-color:var(--hot-bd)}
+.chip.warm{background:var(--warm-bg);color:var(--warm-fg);border-color:var(--warm-bd)}
+.chip.nur{background:var(--nurture-bg);color:var(--nurture-fg);border-color:var(--nurture-bd)}
+.chip.cold{background:var(--cold-bg);color:var(--cold-fg);border-color:var(--cold-bd)}
+.chip.ai{background:var(--ai-050);color:var(--ai-700);border-color:var(--ai-100)}
+.chip.dang{background:var(--danger-bg);color:var(--danger-fg);border-color:var(--danger-bd)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;padding:10px 16px;border-radius:var(--r-sm);border:1px solid var(--border-strong);background:var(--surface);box-shadow:var(--sh-1);color:var(--ink-700);transition:background .18s,border-color .18s,box-shadow .18s}
+.btn:hover{background:var(--surface-2);border-color:var(--ink-400)}
+.btn.pri{background:var(--ai-grad);border:none;color:#fff;box-shadow:0 2px 10px rgba(37,99,235,.28)}
+.btn.pri:hover{opacity:.92;background:var(--ai-grad)}
+.btn.sm{padding:7px 13px;font-size:12.5px}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 4px rgba(37,99,235,.18)}
+
+.lead-head{display:flex;align-items:center;gap:var(--sp-5);flex-wrap:wrap;margin-bottom:var(--sp-5)}
+.lead-av{width:60px;height:60px;border-radius:var(--r-lg);background:var(--ai-grad);color:#fff;display:grid;place-items:center;font-family:var(--font-display);font-size:21px;font-weight:800;flex:none;box-shadow:var(--sh-ai)}
+.lead-id h1{font-family:var(--font-display);font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.lead-meta{display:flex;align-items:center;gap:var(--sp-5);flex-wrap:wrap;margin-top:5px;font-size:13.5px;color:var(--ink-500)}
+.lead-meta span{display:inline-flex;align-items:center;gap:7px}
+.tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+
+.nba{display:flex;align-items:flex-start;gap:13px;padding:var(--sp-4) var(--sp-5);background:var(--ai-050);border:1px solid var(--ai-100);border-radius:var(--r-lg);margin-bottom:var(--sp-5);font-size:14px;line-height:1.6;box-shadow:var(--sh-ai)}
+.nba .nba-i{width:30px;height:30px;border-radius:var(--r-sm);background:var(--ai-grad);color:#fff;display:grid;place-items:center;flex:none}
+.rail{display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-bottom:var(--sp-5)}
+
+.grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:var(--sp-5);align-items:start}
+.stack{display:flex;flex-direction:column;gap:var(--sp-5)}
+
+/* score ring */
+.score-panel{border:none;box-shadow:var(--sh-3);border-radius:var(--r-xl);overflow:hidden}
+.score-top{display:flex;gap:var(--sp-8);padding:var(--sp-6);align-items:center;flex-wrap:wrap}
+.ring{width:168px;height:168px;border-radius:50%;flex:none;display:grid;place-items:center;position:relative;
+background:conic-gradient(from -90deg,#7C3AED 0 35.9%,#2563EB 0 76.3%,#0891B2 0 85.9%,#E2E8F0 0 100%)}
+.ring::after{content:"";position:absolute;inset:16px;border-radius:50%;background:var(--surface)}
+.ring-in{position:relative;z-index:1;text-align:center}
+.ring-num{font-family:var(--font-display);font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums;color:var(--ink-900)}
+.ring-band{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hot-fg);margin-top:5px}
+.score-side{flex:1;min-width:240px}
+.delta{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--success-fg);background:var(--success-bg);border:1px solid var(--hot-bd);padding:5px 12px;border-radius:var(--r-pill)}
+.glist{display:flex;flex-direction:column;gap:11px;margin-top:var(--sp-4)}
+.grow{display:grid;grid-template-columns:16px 1fr 54px;align-items:center;gap:11px;font-size:13.5px}
+.gdot{width:12px;height:12px;border-radius:4px}
+.gtrack{height:8px;border-radius:var(--r-pill);background:var(--cold-bg);overflow:hidden}
+.gtrack i{display:block;height:100%;border-radius:var(--r-pill)}
+.gval{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+
+.ftable{width:100%;border-collapse:collapse;font-size:13.5px}
+.ftable th{text-align:left;font-family:var(--font-display);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-400);padding:11px var(--sp-5);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface-2)}
+.ftable td{padding:11px var(--sp-5);border-bottom:1px solid var(--border)}
+.ftable .r{text-align:right;font-variant-numeric:tabular-nums}
+.ftable .grp td{background:var(--surface-2);font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-500);padding:9px var(--sp-5)}
+.ftable .grp.g1 td{color:var(--ai-700)}.ftable .grp.g2 td{color:var(--brand-800)}.ftable .grp.g3 td{color:#0E7490}
+.ftable .sub td{font-weight:700;background:var(--surface-2)}
+.ftable .tot td{background:var(--brand-050);font-family:var(--font-display);font-weight:800;color:var(--brand-900);font-size:14.5px}
+.why{padding:var(--sp-5) var(--sp-6);border-top:1px solid var(--border);background:var(--canvas-2)}
+.why ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:var(--sp-3)}
+.why li{display:flex;gap:11px;font-size:13.8px;line-height:1.55}
+.mk{width:22px;height:22px;border-radius:var(--r-pill);display:grid;place-items:center;font-size:13px;font-weight:800;flex:none;margin-top:1px}
+.mk.p{background:var(--hot-bg);color:var(--hot-fg);border:1px solid var(--hot-bd)}
+.mk.m{background:var(--warm-bg);color:var(--warm-fg);border:1px solid var(--warm-bd)}
+.why b{font-weight:700}
+.ruleline{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);flex-wrap:wrap;padding:var(--sp-4) var(--sp-6);border-top:1px solid var(--border);font-size:12.5px;color:var(--ink-400)}
+
+.kv{display:grid;grid-template-columns:130px 1fr;gap:13px var(--sp-4);font-size:14px}
+.kv dt{color:var(--ink-500)}
+.kv dd{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tick{width:17px;height:17px;border-radius:50%;background:var(--success-bg);color:var(--success-fg);border:1px solid var(--hot-bd);display:grid;place-items:center;flex:none}
+
+.unit{display:flex;align-items:center;gap:var(--sp-4);padding:var(--sp-4) var(--sp-5);border-bottom:1px solid var(--border)}
+.unit:last-child{border-bottom:none}
+.unit-i{width:42px;height:42px;border-radius:var(--r-sm);background:var(--brand-050);color:var(--brand-700);display:grid;place-items:center;flex:none}
+.unit-t{flex:1;min-width:0}
+.unit-t b{font-weight:700;font-size:14px;display:block;font-family:var(--font-display)}
+.unit-t small{color:var(--ink-500);font-size:12.8px}
+.unit-p{text-align:right}
+.unit-p b{font-size:14.5px;font-weight:700;display:block;font-variant-numeric:tabular-nums}
+
+.call{border:1px solid var(--ai-100);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);box-shadow:var(--sh-ai)}
+.call+.call{margin-top:var(--sp-4)}
+.call-h{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--ai-050);border-bottom:1px solid var(--ai-100);flex-wrap:wrap}
+.dir{width:32px;height:32px;border-radius:var(--r-sm);display:grid;place-items:center;flex:none}
+.dir.in{background:var(--hot-bg);color:var(--hot-fg)}
+.dir.out{background:var(--nurture-bg);color:var(--nurture-fg)}
+.call-h b{font-family:var(--font-display);font-size:14px;font-weight:700}
+.call-h .t{font-size:12.5px;color:var(--ink-500)}
+.call-b{padding:var(--sp-5)}
+.summary{font-size:14.5px;line-height:1.7;max-width:72ch;color:var(--ink-700)}
+.sig{display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-top:var(--sp-4)}
+.player{display:flex;align-items:center;gap:12px;margin-top:var(--sp-4);padding:11px 13px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm)}
+.play{width:34px;height:34px;border-radius:50%;background:var(--ai-grad);color:#fff;display:grid;place-items:center;flex:none;box-shadow:0 2px 8px rgba(124,58,237,.3)}
+.wave{flex:1;height:5px;border-radius:var(--r-pill);background:var(--border-strong);position:relative;overflow:hidden}
+.wave i{position:absolute;inset:0 62% 0 0;background:var(--ai-grad);border-radius:var(--r-pill)}
+.call-f{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-3) var(--sp-5);border-top:1px solid var(--border);background:var(--surface-2);flex-wrap:wrap;font-size:13px}
+.dlt{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:var(--success-fg);background:var(--success-bg);border:1px solid var(--hot-bd);padding:4px 11px;border-radius:var(--r-pill);font-variant-numeric:tabular-nums}
+
+.tl-filter{display:flex;gap:7px;flex-wrap:wrap;padding:0 var(--sp-5) var(--sp-4)}
+.fchip{font-size:12.5px;font-weight:600;padding:6px 13px;border-radius:var(--r-pill);border:1px solid var(--border);color:var(--ink-500);background:var(--surface);transition:background .18s,color .18s,border-color .18s}
+.fchip:hover{border-color:var(--border-strong);color:var(--ink-700)}
+.fchip.on{background:var(--brand-700);border-color:var(--brand-700);color:#fff}
+.tl{list-style:none;padding:0 var(--sp-5) var(--sp-5)}
+.tl li{display:grid;grid-template-columns:34px 1fr;gap:var(--sp-4);position:relative;padding-bottom:var(--sp-6)}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:16.5px;top:38px;bottom:0;width:2px;background:var(--border);border-radius:1px}
+.tl li:last-child::before{display:none}
+.ti{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-500);z-index:1}
+.ti.g{background:var(--hot-bg);border-color:var(--hot-bd);color:var(--hot-fg)}
+.ti.a{background:var(--ai-050);border-color:var(--ai-100);color:var(--ai-700)}
+.tc b{font-family:var(--font-display);font-size:14px;font-weight:700}
+.tc p{font-size:13.2px;color:var(--ink-500);margin-top:3px;line-height:1.55}
+.tc .when{font-size:12px;color:var(--ink-400);margin-top:4px}
+.notebox{display:flex;gap:var(--sp-2);margin:0 var(--sp-5) var(--sp-5)}
+.notebox input{flex:1;border:1px solid var(--border-strong);border-radius:var(--r-sm);padding:11px 14px;font:inherit;font-size:13.5px;outline:none;box-shadow:var(--sh-1)}
+.notebox input:focus{border-color:var(--brand-600);box-shadow:0 0 0 4px rgba(37,99,235,.14)}
+
+@media(max-width:1200px){.grid{grid-template-columns:1fr}}
+@media(max-width:900px){.side{position:fixed;left:-256px}.content{padding:var(--sp-4)}}
+@media(max-width:600px){
+ .score-top{flex-direction:column;align-items:center;text-align:center;gap:var(--sp-5);padding:var(--sp-5)}
+ .kv{grid-template-columns:1fr;gap:3px var(--sp-4)}
+ .kv dt{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;margin-top:11px}
+ .content{padding:var(--sp-3)}
+ .ftable{font-size:12.5px}.ftable th,.ftable td{padding:9px 13px}
+ .ring{width:140px;height:140px}.ring-num{font-size:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">My work</div>
+      <a href="C-dashboard.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h12"/></svg>My Leads</a>
+      <a class="on" href="C-lead-detail.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>Lead Detail</a>
+      <a href="C-dashboard.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Call Log</a>
+      <a href="C-dashboard.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Follow-ups</a>
+      <div class="nav-eyebrow">Team</div>
+      <a href="C-dashboard.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Manager view</a>
+    </nav>
+    <div class="side-foot">
+      <div class="avail"><span class="dot"></span>Available for leads</div>
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Open leads</span><span class="num" style="font-weight:600;color:var(--ink-700)">12 / 20</span></div>
+      <div class="cap-bar"><div class="cap-fill"></div></div>
+      <div class="who">
+        <div class="who-av">FA</div>
+        <div><div style="font-weight:700;font-size:13px;font-family:var(--font-display)">Farhana Akter</div><div style="font-size:11.5px;color:var(--ink-400)">Sales Agent</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="text" placeholder="Search by name or phone…">
+      </div>
+      <div class="top-spacer"></div>
+      <span class="pill-alert"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg>2 SLA breaches</span>
+      <button class="icon-btn" aria-label="Notifications"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+      <div class="crumb"><a href="C-dashboard.html">My Leads</a><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></svg><span style="color:var(--ink-700);font-weight:600">Nusrat Jahan</span></div>
+
+      <div class="lead-head">
+        <div class="lead-av">NJ</div>
+        <div class="lead-id" style="flex:1;min-width:240px">
+          <h1>Nusrat Jahan</h1>
+          <div class="lead-meta">
+            <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg><span class="num">+8801711-2••-••8</span></span>
+            <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>nusrat.jahan@gmail.com</span>
+          </div>
+          <div class="tagrow">
+            <span class="chip hot">86 · Hot</span>
+            <span class="chip">Site Visit Scheduled</span>
+            <span class="chip">FB Lead Gen — Khulshi 3BR Sep</span>
+            <span class="chip">Farhana Akter</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nba">
+        <span class="nba-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></span>
+        <div><b>Next best action —</b> she asked for the Green Court floor plan and a per-sqft comparison before Thursday's visit. Send the Khulshi 3BR pack today; her price objection is the only factor holding the score below 90.</div>
+      </div>
+
+      <div class="rail">
+        <button class="btn pri"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Call now</button>
+        <button class="btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>Send email</button>
+        <button class="btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Schedule site visit</button>
+        <button class="btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 5v14M5 12h14"/></svg>Add note</button>
+        <button class="btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 12h11M11 7l5 5-5 5"/><path d="M20 5v14"/></svg>Change stage</button>
+        <div style="flex:1"></div>
+        <button class="btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg>Mark as garbage</button>
+      </div>
+
+      <div class="grid">
+        <div class="stack">
+
+          <section class="card score-panel">
+            <div class="score-top">
+              <div class="ring">
+                <div class="ring-in">
+                  <div class="ring-num">86</div>
+                  <div class="ring-band">Hot</div>
+                </div>
+              </div>
+              <div class="score-side">
+                <div class="eyebrow">Lead score</div>
+                <div style="display:flex;align-items:center;gap:11px;margin:7px 0 3px;flex-wrap:wrap">
+                  <span style="font-family:var(--font-display);font-size:17px;font-weight:700">Sales-ready</span>
+                  <span class="delta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>+14 since 02 Sep</span>
+                </div>
+                <div class="glist">
+                  <div class="grow"><span class="gdot" style="background:var(--ai-600)"></span><div class="gtrack"><i style="width:79.8%;background:var(--ai-600)"></i></div><span class="gval">35.9</span></div>
+                  <div class="grow" style="grid-column:2/4;margin-top:-7px"><small style="color:var(--ink-500);font-size:12.5px">AI conversation signals — of 45</small></div>
+                  <div class="grow"><span class="gdot" style="background:var(--brand-700)"></span><div class="gtrack"><i style="width:89.8%;background:var(--brand-700)"></i></div><span class="gval">40.4</span></div>
+                  <div class="grow" style="grid-column:2/4;margin-top:-7px"><small style="color:var(--ink-500);font-size:12.5px">Business fit — of 45</small></div>
+                  <div class="grow"><span class="gdot" style="background:#0891B2"></span><div class="gtrack"><i style="width:96%;background:#0891B2"></i></div><span class="gval">9.6</span></div>
+                  <div class="grow" style="grid-column:2/4;margin-top:-7px"><small style="color:var(--ink-500);font-size:12.5px">Behavioural — of 10</small></div>
+                </div>
+              </div>
+            </div>
+
+            <table class="ftable">
+              <thead><tr><th>Factor</th><th>Signal</th><th class="r">Weight</th><th class="r">Points</th></tr></thead>
+              <tbody>
+                <tr class="grp g1"><td colspan="4">AI conversation signals</td></tr>
+                <tr><td>Purchase intent</td><td class="num">78 / 100</td><td class="r">20</td><td class="r">15.6</td></tr>
+                <tr><td>Engagement level</td><td>High · 7 questions · 46% talk</td><td class="r">12</td><td class="r">10.8</td></tr>
+                <tr><td>Objection severity</td><td>2 hard objections</td><td class="r">7</td><td class="r">3.5</td></tr>
+                <tr><td>Sentiment</td><td>Positive</td><td class="r">6</td><td class="r">6.0</td></tr>
+                <tr class="sub"><td colspan="2">Subtotal</td><td class="r">45</td><td class="r">35.9</td></tr>
+                <tr class="grp g2"><td colspan="4">Business fit</td></tr>
+                <tr><td>Budget band</td><td>৳85 lakh – ৳1.10 crore</td><td class="r">18</td><td class="r">15.8</td></tr>
+                <tr><td>Purchase timeline</td><td>3–6 months</td><td class="r">12</td><td class="r">9.6</td></tr>
+                <tr><td>Location match</td><td>Khulshi · exact</td><td class="r">8</td><td class="r">8.0</td></tr>
+                <tr><td>Unit type &amp; size</td><td>3-bed, 1,650 sqft available</td><td class="r">7</td><td class="r">7.0</td></tr>
+                <tr class="sub"><td colspan="2">Subtotal</td><td class="r">45</td><td class="r">40.4</td></tr>
+                <tr class="grp g3"><td colspan="4">Behavioural</td></tr>
+                <tr><td>Responsiveness</td><td>2 of 2 calls connected</td><td class="r">6</td><td class="r">6.0</td></tr>
+                <tr><td>Repeat engagement</td><td>2 calls · site visit requested</td><td class="r">4</td><td class="r">3.6</td></tr>
+                <tr class="sub"><td colspan="2">Subtotal</td><td class="r">10</td><td class="r">9.6</td></tr>
+                <tr class="tot"><td colspan="2">Composite score</td><td class="r">100</td><td class="r">85.9</td></tr>
+              </tbody>
+            </table>
+
+            <div class="why">
+              <div class="eyebrow">Why this score</div>
+              <ul>
+                <li><span class="mk p">+</span><div><b>Budget matches live inventory.</b> ৳85 lakh–1.10 crore overlaps the 3-bed band at Sanmar Green Court, Khulshi.</div></li>
+                <li><span class="mk p">+</span><div><b>Buying within 3–6 months</b> with bank pre-approval already in hand.</div></li>
+                <li><span class="mk p">+</span><div><b>Engagement rated High.</b> Stayed on the call 6m 52s and asked 7 questions about handover and payment schedule.</div></li>
+                <li><span class="mk p">+</span><div><b>Khulshi is an exact match</b> for two active projects, so no compromise is needed on location.</div></li>
+                <li><span class="mk m">−</span><div><b>Two hard objections raised</b> — per-sqft price and handover timeline. Cost 3.5 of 7 available points.</div></li>
+                <li><span class="mk m">−</span><div><b>Budget floor sits below Khulshi entry pricing</b> by roughly ৳6 lakh. Cost 2.2 of 18 available points.</div></li>
+              </ul>
+            </div>
+            <div class="ruleline">
+              <span>Scored with rule set <b style="color:var(--ink-700)">v7</b> · 08 Sep 2026, 11:38</span>
+              <button class="btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11a8 8 0 1 0-2.3 6.3"/><path d="M20 5v6h-6"/></svg>Re-score</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-h"><h2>Requirement profile</h2><div style="flex:1"></div><span class="chip ai">4 fields AI-extracted</span></div>
+            <div class="card-b">
+              <dl class="kv">
+                <dt>Budget</dt><dd><b class="num">৳85 lakh – ৳1.10 crore</b><span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="m5 13 4 4 10-10"/></svg></span><span style="font-size:12px;color:var(--ink-400)">confirmed</span></dd>
+                <dt>Timeline</dt><dd>3–6 months <span class="chip ai">AI</span></dd>
+                <dt>Locations</dt><dd><span class="chip">Khulshi</span><span class="chip">Nasirabad</span><span class="chip ai">AI</span></dd>
+                <dt>Unit type</dt><dd>Apartment · 3 bed · min 1,600 sqft <span class="chip ai">AI</span></dd>
+                <dt>Financing</dt><dd>Bank loan — pre-approved, City Bank <span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="m5 13 4 4 10-10"/></svg></span></dd>
+                <dt>Purpose</dt><dd>Own residence <span class="chip ai">AI</span></dd>
+                <dt>Source</dt><dd>Facebook lead form → inbound call</dd>
+                <dt>First seen</dt><dd>28 Aug 2026</dd>
+              </dl>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-h"><h2>Matching units</h2><div style="flex:1"></div><span class="chip">3 available</span></div>
+            <div class="unit">
+              <div class="unit-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+              <div class="unit-t"><b>Sanmar Green Court · Unit B-704</b><small>Khulshi · 1,650 sqft · 3 bed · south facing</small></div>
+              <div class="unit-p"><b>৳1.02 crore</b><span class="chip hot">Available</span></div>
+            </div>
+            <div class="unit">
+              <div class="unit-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+              <div class="unit-t"><b>Sanmar Ruby Twin · Unit C-503</b><small>Nasirabad · 1,580 sqft · 3 bed</small></div>
+              <div class="unit-p"><b>৳94 lakh</b><span class="chip warm">2 left</span></div>
+            </div>
+            <div class="unit">
+              <div class="unit-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+              <div class="unit-t"><b>Sanmar Ocean City · Unit A-1102</b><small>East Nasirabad · 1,720 sqft · 3 bed · corner</small></div>
+              <div class="unit-p"><b>৳1.18 crore</b><span class="chip cold">Above budget</span></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="stack">
+          <section class="card ai">
+            <div class="card-h"><h2>Call summaries</h2><span class="chip ai"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3.6"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>VoiceIQ</span><div style="flex:1"></div><span class="chip">2 calls</span></div>
+            <div class="card-b" style="padding:var(--sp-4)">
+
+              <article class="call">
+                <div class="call-h">
+                  <div class="dir in"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 5 9 15"/><path d="M9 8v7h7"/></svg></div>
+                  <b>Inbound</b><span class="t">08 Sep 2026, 11:31 · 6m 52s</span>
+                  <div style="flex:1"></div><span class="chip hot">Connected</span>
+                </div>
+                <div class="call-b">
+                  <p class="summary">Caller asked about 3-bedroom apartments in Khulshi after seeing the Facebook advertisement. Confirmed a budget of ৳85 lakh to ৳1.10 crore and said she wants to move within three to six months. She has bank pre-approval from City Bank. She pushed back twice on the per-square-foot rate at Green Court, comparing it to a competitor quote in the same area, and asked for written confirmation of the handover date. Requested a site visit at Green Court, and Thursday afternoon was agreed. She asked for the floor plan and a per-sqft comparison to be emailed before the visit.</p>
+                  <div class="sig">
+                    <span class="chip hot">Intent 78</span><span class="chip hot">Engagement High</span><span class="chip hot">Sentiment Positive</span>
+                    <span class="chip warm">Objection · price</span><span class="chip warm">Objection · handover</span>
+                    <span class="chip">7 questions</span><span class="chip">46% caller talk</span>
+                  </div>
+                  <div class="player">
+                    <button class="play" aria-label="Play recording"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+                    <div class="wave"><i></i></div>
+                    <span class="num" style="font-size:12.5px;color:var(--ink-500)">4:14 / 6:52</span>
+                    <a href="C-lead-detail.html" style="font-size:13px;color:var(--ai-700);font-weight:700">Transcript</a>
+                  </div>
+                </div>
+                <div class="call-f"><span style="color:var(--ink-500)">Extracted: budget, timeline, location, unit size, financing</span><span class="dlt">Score +14 · 72 → 86</span></div>
+              </article>
+
+              <article class="call">
+                <div class="call-h">
+                  <div class="dir out"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 19 15 9"/><path d="M15 16V9H8"/></svg></div>
+                  <b>Outbound</b><span class="t">02 Sep 2026, 16:05 · 3m 18s</span>
+                  <div style="flex:1"></div><span class="chip hot">Connected</span>
+                </div>
+                <div class="call-b">
+                  <p class="summary">First qualification call following the Facebook form submission. Caller confirmed she is looking for her own residence rather than an investment, and named Khulshi and Nasirabad as acceptable areas. She was non-committal on budget at this stage and asked to be sent project information by email before discussing figures.</p>
+                  <div class="sig"><span class="chip warm">Intent 61</span><span class="chip warm">Engagement Medium</span><span class="chip">Sentiment Neutral</span><span class="chip">3 questions</span></div>
+                </div>
+                <div class="call-f"><span style="color:var(--ink-500)">Extracted: location, purpose</span><span class="dlt">Score +9 · 63 → 72</span></div>
+              </article>
+
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-h"><h2>Communication timeline</h2><div style="flex:1"></div><span class="chip">11 events</span></div>
+            <div class="tl-filter">
+              <button class="fchip on">All</button><button class="fchip">Calls</button><button class="fchip">Emails</button>
+              <button class="fchip">Notes</button><button class="fchip">Score</button><button class="fchip">Automation</button>
+            </div>
+            <ul class="tl">
+              <li><span class="ti g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>
+                <div class="tc"><b>Score rose 72 → 86</b><p>Moved from Warm into Hot. Driven by budget confirmation and High engagement on the inbound call.</p><div class="when">08 Sep 2026, 11:38 · rule set v7</div></div></li>
+              <li><span class="ti"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg></span>
+                <div class="tc"><b>Stage changed to Site Visit Scheduled</b><p>Green Court, Khulshi — Thursday 11 Sep, 4:00 PM. Set by Farhana Akter.</p><div class="when">08 Sep 2026, 11:36</div></div></li>
+              <li><span class="ti g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg></span>
+                <div class="tc"><b>Inbound call · 6m 52s · connected</b><p>Budget and timeline confirmed. Price and handover objections raised. Site visit agreed.</p><div class="when">08 Sep 2026, 11:31</div></div></li>
+              <li><span class="ti a"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="3.6"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
+                <div class="tc"><b>Automation · Warm nurture step 2 sent</b><p>Rule "Warm — no contact 5 days" sent template <i>Khulshi 3BR project overview</i>. Opened twice.</p><div class="when">06 Sep 2026, 09:15</div></div></li>
+              <li><span class="ti"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg></span>
+                <div class="tc"><b>Email opened · Khulshi 3BR project overview</b><p>Two opens, one click through to the Green Court floor plan.</p><div class="when">06 Sep 2026, 20:41</div></div></li>
+              <li><span class="ti g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>
+                <div class="tc"><b>Qualified · score 63 → 72</b><p>Crossed the Warm threshold after the first outbound conversation.</p><div class="when">02 Sep 2026, 16:11</div></div></li>
+              <li><span class="ti"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h5a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="10" cy="8" r="3"/></svg></span>
+                <div class="tc"><b>Assigned to Farhana Akter</b><p>Routed by project affinity — Khulshi portfolio.</p><div class="when">02 Sep 2026, 15:58</div></div></li>
+            </ul>
+            <div class="notebox"><input type="text" placeholder="Add a note…"><button class="btn pri">Save note</button></div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanmar Lead Intelligence &amp; Sales CRM — Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="signal.css">
+</head>
+<body>
+<div class="portal">
+  <div class="portal-in">
+
+    <div style="display:flex;align-items:center;gap:13px">
+      <div class="brand-mark" style="width:44px;height:44px;font-size:20px">S</div>
+      <div>
+        <div class="brand-name" style="font-size:20px">Sanmar Lead Intelligence &amp; Sales CRM</div>
+        <div class="brand-sub">Sanmar Properties Ltd · prototype · 08 Sep 2026</div>
+      </div>
+    </div>
+
+    <p style="margin-top:var(--sp-5);font-size:15px;color:var(--ink-500);max-width:76ch;line-height:1.7">
+      Marketing campaigns generate far more phone enquiries than the sales floor can work, and most of that volume is
+      noise. This platform sits between the campaign and the salesperson: it ingests the AI analysis of every call,
+      scores each lead on conversation signals plus business fit, separates garbage from sales-ready, routes only
+      qualified leads to agents, and gives the floor one place to run the pipeline and automate follow-up.
+    </p>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:var(--sp-5)">
+      <span class="chip">Requirement #4 · Lead Qualification Engine</span>
+      <span class="chip">Requirement #5 · Sales CRM portal</span>
+      <span class="chip ai">Call AI consumed via webhook</span>
+      <span class="chip">11 screens · 2 portals</span>
+    </div>
+
+    <div class="pcards">
+
+      <a class="pcard" href="agent/my-leads.page.html">
+        <div class="pcard-i">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>
+        </div>
+        <h3>Sales Agent portal</h3>
+        <p>Know who to call next, and walk into the call already knowing what was said last time.</p>
+        <ul>
+          <li><span class="chip">My Leads</span></li>
+          <li><span class="chip hot">Lead Detail — the hero screen</span></li>
+          <li><span class="chip">Call Log</span></li>
+          <li><span class="chip">Follow-ups</span></li>
+        </ul>
+        <div style="margin-top:var(--sp-5);display:flex;align-items:center;gap:8px;color:var(--brand-700);font-weight:700;font-size:13.5px">
+          Enter as Farhana Akter
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </div>
+      </a>
+
+      <a class="pcard" href="manager/dashboard.page.html">
+        <div class="pcard-i">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7.5" height="8.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.5"/><rect x="3" y="14.5" width="7.5" height="6.5" rx="1.5"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.5"/></svg>
+        </div>
+        <h3>Sales Manager console</h3>
+        <p>Stop wasting the floor's time on garbage leads, and see which campaigns actually pay.</p>
+        <ul>
+          <li><span class="chip">Dashboard</span></li>
+          <li><span class="chip">All Leads</span></li>
+          <li><span class="chip cold">Review Queue</span></li>
+          <li><span class="chip ai">Scoring Rules</span></li>
+          <li><span class="chip">Automation</span></li>
+          <li><span class="chip">Campaigns</span></li>
+          <li><span class="chip">Team &amp; Routing</span></li>
+        </ul>
+        <div style="margin-top:var(--sp-5);display:flex;align-items:center;gap:8px;color:var(--brand-700);font-weight:700;font-size:13.5px">
+          Enter as Shahriar Rahman
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="card" style="margin-top:var(--sp-8);box-shadow:none;background:var(--surface-2)">
+      <div class="card-b" style="font-size:13px;color:var(--ink-500);line-height:1.7">
+        <b style="color:var(--ink-700);font-family:var(--font-display)">Notes for the demo.</b>
+        Project names are Sanmar's real portfolio — Orchard Garden (West Khulshi, G+19, 260 units),
+        Ocean City, Sardinia, Hyde Park, Avenue Tower, Sky Tower, Residence &amp; Sky Club.
+        <b style="color:var(--warm-fg)">Unit prices are illustrative</b> — Sanmar does not publish rates, so figures are
+        modelled on prevailing Khulshi and Nasirabad per-sqft levels and must be replaced with real price bands.
+        The call-analysis provider is shown as <b style="color:var(--ai-700)">VoiceIQ</b>, a placeholder for whichever
+        product Sanmar adopts. Requirement items 1–3 (click-to-call, voice routing, omnichannel bot and IVR) have
+        separate demos and are referenced here only as inbound sources.
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

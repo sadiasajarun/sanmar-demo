@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Leads — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">My work</div>
+      <a class="on" href="my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h12"/></svg>My Leads<span class="count">12</span></a>
+      <a href="call-log.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Call Log</a>
+      <a href="followups.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Follow-ups<span class="count alert">2</span></a>
+      <div class="nav-eyebrow">Team</div>
+      <a href="../manager/dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Manager console</a>
+    </nav>
+    <div class="side-foot">
+      <div class="avail"><span class="dot"></span>Available for leads</div>
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Open leads</span><span class="num" style="font-weight:600;color:var(--ink-700)">12 / 20</span></div>
+      <div class="cap-bar"><div class="cap-fill" style="width:60%"></div></div>
+      <div class="who">
+        <div class="who-av">FA</div>
+        <div><div class="who-n">Farhana Akter</div><div class="who-r">Sales Agent</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">My Leads</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search by name or phone…"></div>
+      <span class="chip dang"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg>2 SLA breaches</span>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="g4 mb5">
+        <div class="kpi"><div><div class="eyebrow">Assigned to me</div><div class="kpi-v">12</div></div><span class="kpi-d flat">Capacity 20 · 60% utilised</span></div>
+        <div class="kpi"><div><div class="eyebrow">Hot leads</div><div class="kpi-v" style="color:var(--hot-fg)">3</div></div><span class="kpi-d flat">2-hour first-contact SLA</span></div>
+        <div class="kpi"><div><div class="eyebrow">First contact due today</div><div class="kpi-v">2</div></div><span class="kpi-d down"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg>2 already breached</span></div>
+        <div class="kpi"><div><div class="eyebrow">Site visits this week</div><div class="kpi-v">3</div></div><span class="kpi-d flat">Orchard Garden ×2 · Sardinia ×1</span></div>
+      </div>
+
+      <section class="card">
+        <div class="card-h">
+          <h2>My queue</h2>
+          <span class="chip">Sorted by score, then SLA urgency</span>
+          <div class="spacer"></div>
+          <div class="filters" data-filter-group="myleads">
+            <button type="button" class="fchip on" data-filter="*">All<span class="n">12</span></button>
+            <button type="button" class="fchip" data-filter="hot">Hot<span class="n">3</span></button>
+            <button type="button" class="fchip" data-filter="warm">Warm<span class="n">9</span></button>
+            <button type="button" class="fchip" data-filter="firstcontact">Needs first contact<span class="n">3</span></button>
+            <button type="button" class="fchip" data-filter="sla">SLA breached<span class="n">2</span></button>
+            <button type="button" class="fchip" data-filter="visit">Site visit this week<span class="n">3</span></button>
+          </div>
+        </div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th style="width:34px"><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></th>
+                <th>Lead</th><th>Score</th><th>Stage</th><th class="r">Budget</th><th>Preference</th>
+                <th>Campaign</th><th>Last touch</th><th>Next action</th><th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-filter-item="myleads" data-tags="hot visit">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Nusrat Jahan</span><span class="sub num">+8801711-2••-••8</span></a></td>
+                <td><span class="chip hot">86 · Hot</span></td>
+                <td><span class="chip">Site Visit Scheduled</span></td>
+                <td class="r">৳1.25–1.55 cr</td>
+                <td>3-bed · West Khulshi<span class="sub">min 1,600 sqft</span></td>
+                <td>FB — Orchard Garden 3BR Sep</td>
+                <td>2 hours ago</td>
+                <td><span class="chip warm">Send floor plan · today</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr class="breach" data-filter-item="myleads" data-tags="hot firstcontact sla">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Md. Rafiqul Islam</span><span class="sub num">+8801819-4••-••1</span></a></td>
+                <td><span class="chip hot">81 · Hot</span></td>
+                <td><span class="chip">Qualified</span></td>
+                <td class="r">৳95 lakh–1.20 cr</td>
+                <td>3-bed · Nasirabad<span class="sub">min 1,450 sqft</span></td>
+                <td>Google — Apartment Chattogram</td>
+                <td>Never contacted</td>
+                <td><span class="chip dang">SLA breached 3h 12m</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="hot">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Tanvir Ahmed</span><span class="sub num">+8801713-8••-••5</span></a></td>
+                <td><span class="chip hot">78 · Hot</span></td>
+                <td><span class="chip">Negotiation</span></td>
+                <td class="r">৳1.60–2.00 cr</td>
+                <td>4-bed · West Khulshi<span class="sub">min 2,100 sqft</span></td>
+                <td>Orchard Garden Launch Event</td>
+                <td>Yesterday</td>
+                <td><span class="chip">Send revised payment plan</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="warm">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Shahnaz Parvin</span><span class="sub num">+8801755-6••-••3</span></a></td>
+                <td><span class="chip warm">72 · Warm</span></td>
+                <td><span class="chip">Contacted</span></td>
+                <td class="r">৳80 lakh–1.05 cr</td>
+                <td>3-bed · Panchlaish<span class="sub">min 1,350 sqft</span></td>
+                <td>Referral — Existing Owners</td>
+                <td>2 days ago</td>
+                <td><span class="chip">Call back · Wed</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="warm">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Abdul Karim Chowdhury</span><span class="sub num">+8801911-3••-••7</span></a></td>
+                <td><span class="chip warm">69 · Warm</span></td>
+                <td><span class="chip">Site Visit Done</span></td>
+                <td class="r">৳1.40–1.80 cr</td>
+                <td>4-bed · Khulshi<span class="sub">min 1,900 sqft</span></td>
+                <td>Orchard Garden Launch Event</td>
+                <td>4 hours ago</td>
+                <td><span class="chip warm">Post-visit follow-up · today</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="warm">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Farzana Haque</span><span class="sub num">+8801677-2••-••9</span></a></td>
+                <td><span class="chip warm">66 · Warm</span></td>
+                <td><span class="chip">Qualified</span></td>
+                <td class="r">৳90 lakh–1.15 cr</td>
+                <td>3-bed · Agrabad<span class="sub">min 1,400 sqft</span></td>
+                <td>FB — Orchard Garden 3BR Sep</td>
+                <td>Yesterday</td>
+                <td><span class="chip">Qualification call · today</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="warm">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Mizanur Rahman</span><span class="sub num">+8801552-7••-••4</span></a></td>
+                <td><span class="chip warm">63 · Warm</span></td>
+                <td><span class="chip">Contacted</span></td>
+                <td class="r">৳1.10–1.35 cr</td>
+                <td>3-bed · Nasirabad<span class="sub">min 1,550 sqft</span></td>
+                <td>Google — Apartment Chattogram</td>
+                <td>3 days ago</td>
+                <td><span class="chip ai">Nurture email queued</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr class="breach" data-filter-item="myleads" data-tags="warm firstcontact sla">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Ayesha Siddika</span><span class="sub num">+8801733-9••-••2</span></a></td>
+                <td><span class="chip warm">61 · Warm</span></td>
+                <td><span class="chip">New</span></td>
+                <td class="r">৳85 lakh–1.10 cr</td>
+                <td>3-bed · GEC Circle<span class="sub">min 1,400 sqft</span></td>
+                <td>Billboard — GEC Circle</td>
+                <td>Never contacted</td>
+                <td><span class="chip dang">SLA breached 5h 40m</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="warm">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Sohel Mahmud</span><span class="sub num">+8801844-1••-••6</span></a></td>
+                <td><span class="chip warm">58 · Warm</span></td>
+                <td><span class="chip">Contacted</span></td>
+                <td class="r">৳1.30–1.70 cr</td>
+                <td>4-bed · Khulshi<span class="sub">min 1,850 sqft</span></td>
+                <td>Referral — Existing Owners</td>
+                <td>5 days ago</td>
+                <td><span class="chip">Call back · Thu</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="warm visit">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Rehana Begum</span><span class="sub num">+8801915-5••-••0</span></a></td>
+                <td><span class="chip warm">57 · Warm</span></td>
+                <td><span class="chip">Site Visit Scheduled</span></td>
+                <td class="r">৳1.00–1.25 cr</td>
+                <td>3-bed · Halishahar<span class="sub">min 1,300 sqft</span></td>
+                <td>FB — Orchard Garden 3BR Sep</td>
+                <td>6 hours ago</td>
+                <td><span class="chip">Sardinia visit · Sat 10:00</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="warm visit">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Kamrul Hasan</span><span class="sub num">+8801726-4••-••3</span></a></td>
+                <td><span class="chip warm">56 · Warm</span></td>
+                <td><span class="chip">Qualified</span></td>
+                <td class="r">৳1.45–1.90 cr</td>
+                <td>4-bed · West Khulshi<span class="sub">min 2,000 sqft</span></td>
+                <td>Orchard Garden Launch Event</td>
+                <td>2 days ago</td>
+                <td><span class="chip">Send duplex brochure</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-item="myleads" data-tags="warm firstcontact">
+                <td><span class="cbx" role="checkbox" aria-checked="false" tabindex="0"></span></td>
+                <td><a href="lead-detail.page.html"><span class="nm">Nazmul Karim</span><span class="sub num">+8801601-8••-••7</span></a></td>
+                <td><span class="chip warm">55 · Warm</span></td>
+                <td><span class="chip">New</span></td>
+                <td class="r">৳75–95 lakh</td>
+                <td>2-bed · Agrabad<span class="sub">min 1,150 sqft</span></td>
+                <td>Billboard — GEC Circle</td>
+                <td>30 minutes ago</td>
+                <td><span class="chip">First contact · within 24h</span></td>
+                <td><a class="btn xs" href="lead-detail.page.html">Open</a></td>
+              </tr>
+              <tr data-filter-empty="myleads" hidden><td colspan="10">
+                <div class="empty" style="padding:var(--sp-8) var(--sp-5)">
+                  <div class="empty-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+                  <b>No leads match this filter</b>
+                  <p>Clear the filter to see your full queue of 12 assigned leads.</p>
+                </div></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl-foot">
+          <span>Showing <b data-filter-count="myleads">12</b> of 12 assigned leads</span>
+          <span class="chip cold">Garbage leads never reach this queue — they go to the manager's Review Queue</span>
+          <div class="pager">
+            <button type="button" aria-label="Previous page">‹</button>
+            <button type="button" class="on">1</button>
+            <button type="button" aria-label="Next page">›</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:var(--sp-5)">
+        <div class="card-h"><h2>When your queue is clear</h2></div>
+        <div class="empty">
+          <div class="empty-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M9 7V5h6v2"/><path d="m9 12 2 2 4-4"/><path d="M6 7l1 13h10l1-13"/></svg></div>
+          <b>No leads assigned yet</b>
+          <p>Qualified leads route here automatically as soon as the scoring engine clears them. Nothing to chase in the meantime.</p>
+          <a class="btn sm" href="call-log.page.html">Review recent calls</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>

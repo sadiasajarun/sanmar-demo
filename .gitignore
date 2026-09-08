@@ -1,0 +1,24 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs and temp
+*.log
+tmp/
+.tmp/
+
+# Nothing here is built — the prototype is hand-written static HTML with no
+# build step, so there is no dist/, node_modules/ or lockfile to ignore.
+# If /fullstack-dev is later run in this directory, uncomment the block below.
+# node_modules/
+# dist/
+# build/
+# .env
+# .env.local

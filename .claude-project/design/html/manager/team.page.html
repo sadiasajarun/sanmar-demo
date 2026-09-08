@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team &amp; Routing — Sanmar Lead Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../signal.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div><div class="brand-name">Sanmar</div><div class="brand-sub">Lead Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-eyebrow">Pipeline</div>
+      <a href="dashboard.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7.5" height="8.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.5"/><rect x="3" y="14.5" width="7.5" height="6.5" rx="1.5"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.5"/></svg>Dashboard</a>
+      <a href="leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>All Leads<span class="count">1,284</span></a>
+      <a href="review-queue.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/><path d="M12 17V11"/></svg>Review Queue<span class="count">704</span></a>
+      <div class="nav-eyebrow">Intelligence</div>
+      <a href="scoring-rules.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>Scoring Rules</a>
+      <a href="campaigns.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 4 5-7 4 5"/><path d="M3 21h18"/></svg>Campaigns</a>
+      <div class="nav-eyebrow">Configuration</div>
+      <a href="automation.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 7H14a4 4 0 0 1 0 8h-2.5"/></svg>Automation</a>
+      <a class="on" href="team.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19v-1.5A3.5 3.5 0 0 1 7.5 14h3a3.5 3.5 0 0 1 3.5 3.5V19"/><circle cx="9" cy="8" r="3"/><path d="M16.5 14A3.5 3.5 0 0 1 20 17.5V19"/><circle cx="16" cy="8.5" r="2.5"/></svg>Team &amp; Routing</a>
+      <div class="nav-eyebrow">Agent view</div>
+      <a href="../agent/my-leads.page.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"/></svg>Agent portal</a>
+    </nav>
+    <div class="side-foot">
+      <div style="display:flex;justify-content:space-between;color:var(--ink-500)"><span>Scoring rule set</span><span style="font-weight:700;color:var(--ink-700)">v7</span></div>
+      <div class="hint" style="margin-top:3px">Active since 24 Aug 2026</div>
+      <div class="who">
+        <div class="who-av">SR</div>
+        <div><div class="who-n">Shahriar Rahman</div><div class="who-r">Sales Manager</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="h1">Team &amp; Routing</div>
+      <div class="top-spacer"></div>
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="Search leads…"></div>
+      <button type="button" class="btn sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Last 30 days<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button type="button" class="icon-btn" aria-label="Notifications" data-toast="3 unread: 2 SLA breaches and 1 lead awaiting routing"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+    </header>
+
+    <main class="content">
+
+      <div class="page-head">
+        <div class="t">
+          <h2>Four agents, 91 capacity, 14 leads with nowhere to go</h2>
+          <p>Routing only ever hands a lead to an agent who is under their ceiling. When everyone is full, leads wait in the unassigned pool rather than being dumped on whoever is next — which is why the dashboard is flagging 14 right now.</p>
+        </div>
+        <div class="acts">
+          <button type="button" class="btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 5v14M5 12h14"/></svg>Invite user</button>
+          <button type="button" class="btn pri sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h11M11 7l5 5-5 5"/><path d="M20 5v14"/></svg>Distribute 14 waiting leads</button>
+        </div>
+      </div>
+
+      <div class="g4 mb5">
+        <div class="kpi"><div><div class="eyebrow">Active agents</div><div class="kpi-v">4</div></div><span class="kpi-d flat">1 manager · 0 on leave</span></div>
+        <div class="kpi"><div><div class="eyebrow">Total capacity</div><div class="kpi-v">69 / 91</div></div><span class="kpi-d flat">76% utilised</span></div>
+        <div class="kpi"><div><div class="eyebrow">Waiting for routing</div><div class="kpi-v" style="color:var(--warm-fg)">14</div></div><span class="kpi-d down"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3 2"/></svg>Oldest waiting 4h 20m</span></div>
+        <div class="kpi"><div><div class="eyebrow">Team SLA compliance</div><div class="kpi-v">89<small>%</small></div></div><span class="kpi-d down"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>−4 pts vs Aug</span></div>
+      </div>
+
+      <section class="card mb5">
+        <div class="card-h">
+          <h2>Agent roster</h2>
+          <div class="spacer"></div>
+          <button type="button" class="btn sm">Bulk reassign</button>
+        </div>
+        <div class="scroll">
+          <table class="tbl">
+            <thead>
+              <tr><th>Agent</th><th>Role</th><th>Status</th><th>Load</th><th class="r">Capacity</th><th class="r">Calls today</th><th class="r">SLA</th><th class="r">Visits</th><th class="r">Booked</th><th>Specialism</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="nm">Farhana Akter<span class="sub">farhana.akter@mysanmar.com</span></td>
+                <td>Sales Agent</td>
+                <td><span class="chip hot">Active</span></td>
+                <td><div class="util"><i style="width:60%"></i></div><span class="sub num">12 / 20</span></td>
+                <td class="r"><span class="wnum">20</span></td>
+                <td class="r">14</td><td class="r">94%</td><td class="r">6</td><td class="r">3</td>
+                <td><span class="chip">Orchard Garden</span></td>
+                <td><button type="button" class="btn xs">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="nm">Imran Hossain<span class="sub">imran.hossain@mysanmar.com</span></td>
+                <td>Sales Agent</td>
+                <td><span class="chip hot">Active</span></td>
+                <td><div class="util"><i style="width:76%"></i></div><span class="sub num">19 / 25</span></td>
+                <td class="r"><span class="wnum">25</span></td>
+                <td class="r">21</td><td class="r">89%</td><td class="r">5</td><td class="r">2</td>
+                <td><span class="chip">Nasirabad · Ocean City</span></td>
+                <td><button type="button" class="btn xs">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="nm">Sadia Rahman<span class="sub">sadia.rahman@mysanmar.com</span></td>
+                <td>Tele-sales</td>
+                <td><span class="chip hot">Active</span></td>
+                <td><div class="util"><i class="over" style="width:100%"></i></div><span class="sub num" style="color:var(--danger-fg)">25 / 25 — at capacity</span></td>
+                <td class="r"><span class="wnum">25</span></td>
+                <td class="r">38</td><td class="r">81%</td><td class="r">4</td><td class="r">2</td>
+                <td><span class="chip">First contact · all areas</span></td>
+                <td><button type="button" class="btn xs">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="nm">Mahbub Alam<span class="sub">mahbub.alam@mysanmar.com</span></td>
+                <td>Sales Agent</td>
+                <td><span class="chip hot">Active</span></td>
+                <td><div class="util"><i style="width:62%"></i></div><span class="sub num">13 / 21</span></td>
+                <td class="r"><span class="wnum">21</span></td>
+                <td class="r">11</td><td class="r">92%</td><td class="r">3</td><td class="r">1</td>
+                <td><span class="chip">Commercial · Avenue Tower</span></td>
+                <td><button type="button" class="btn xs">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="nm">Shahriar Rahman<span class="sub">shahriar.rahman@mysanmar.com</span></td>
+                <td>Sales Manager</td>
+                <td><span class="chip hot">Active</span></td>
+                <td><span class="muted">Not in rotation</span></td>
+                <td class="r"><span class="muted">—</span></td>
+                <td class="r">3</td><td class="r"><span class="muted">—</span></td><td class="r">2</td><td class="r">0</td>
+                <td><span class="chip">Oversight · escalations</span></td>
+                <td><button type="button" class="btn xs">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl-foot">
+          <span class="hint">Sadia Rahman is full. Raise her ceiling, move Khulshi leads to Mahbub Alam, or add a fifth agent.</span>
+          <span class="chip dang">Capacity is the current bottleneck</span>
+        </div>
+      </section>
+
+      <div class="split mb5">
+        <section class="card">
+          <div class="card-h">
+            <h2>Routing rules</h2>
+            <span class="chip">Evaluated top to bottom</span>
+            <div class="spacer"></div>
+            <button type="button" class="btn sm">Add rule</button>
+          </div>
+          <div class="rule">
+            <div class="rule-t">
+              <b>1 · Project affinity</b>
+              <p>Assign to the agent whose specialism matches the lead's <span class="tag cnd">preferred project</span>, if they are under capacity</p>
+            </div>
+            <div style="text-align:right;min-width:86px"><div class="num" style="font-weight:700">198</div><div class="hint">routed / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Project affinity rule" tabindex="0"><i></i></span>
+          </div>
+          <div class="rule">
+            <div class="rule-t">
+              <b>2 · Territory</b>
+              <p>Assign by <span class="tag cnd">preferred area</span> — Khulshi and Nasirabad have named owners</p>
+            </div>
+            <div style="text-align:right;min-width:86px"><div class="num" style="font-weight:700">71</div><div class="hint">routed / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Territory rule" tabindex="0"><i></i></span>
+          </div>
+          <div class="rule">
+            <div class="rule-t">
+              <b>3 · Round-robin with capacity</b>
+              <p>Cycle through active agents, <span class="tag cnd">skipping anyone at their ceiling</span> or on leave</p>
+            </div>
+            <div style="text-align:right;min-width:86px"><div class="num" style="font-weight:700">43</div><div class="hint">routed / 30d</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Round-robin rule" tabindex="0"><i></i></span>
+          </div>
+          <div class="rule" style="background:var(--warm-bg)">
+            <div class="rule-t">
+              <b>4 · Fallback — unassigned pool</b>
+              <p>When every agent is full, hold the lead and raise a capacity warning. Never overload an agent silently.</p>
+            </div>
+            <div style="text-align:right;min-width:86px"><div class="num" style="font-weight:700;color:var(--warm-fg)">14</div><div class="hint">waiting now</div></div>
+            <span class="toggle on" role="switch" aria-checked="true" aria-label="Unassigned pool fallback" tabindex="0"><i></i></span>
+          </div>
+          <div class="tbl-foot">
+            <span class="hint">Hot leads always jump the queue within whichever rule matches.</span>
+            <a class="btn sm" href="leads.page.html">See waiting leads</a>
+          </div>
+        </section>
+
+        <div class="stack">
+          <section class="card">
+            <div class="card-h"><h2>Working hours &amp; holidays</h2><div class="spacer"></div><span class="chip">Asia/Dhaka</span></div>
+            <div class="rule">
+              <div class="rule-t"><b>Standard day</b><p>Saturday to Thursday</p></div>
+              <span class="wnum">09:00 – 20:00</span>
+            </div>
+            <div class="rule">
+              <div class="rule-t"><b>Friday</b><p>Reduced cover — tele-sales only</p></div>
+              <span class="wnum">15:00 – 20:00</span>
+            </div>
+            <div class="rule">
+              <div class="rule-t"><b>After 20:00</b><p>Automation queues, SLA clocks pause, calls route to voicemail</p></div>
+              <span class="chip">Off-hours protocol</span>
+            </div>
+            <div class="rule">
+              <div class="rule-t"><b>Next holiday</b><p>Durga Puja — office closed, SLA clocks paused</p></div>
+              <span class="wnum">28 Sep 2026</span>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-h">
+              <h2>Call intelligence integration</h2>
+              <span class="chip ai">Admin only</span>
+              <div class="spacer"></div>
+              <span class="chip hot">Connected</span>
+            </div>
+            <div class="card-b">
+              <dl class="kv">
+                <dt>Provider</dt><dd>VoiceIQ <span class="chip warm">placeholder — client to confirm</span></dd>
+                <dt>Webhook URL</dt><dd><span class="num" style="font-size:12.5px">https://crm.mysanmar.com/api/v1/webhooks/call-intelligence</span></dd>
+                <dt>Signature</dt><dd>HMAC-SHA256 · secret rotated 12 Aug 2026</dd>
+                <dt>Deliveries 24h</dt><dd><b class="num">218</b> received · 216 processed</dd>
+                <dt>Median latency</dt><dd><span class="num">94 seconds</span> from call end to score update</dd>
+              </dl>
+              <div style="display:flex;gap:8px;margin-top:var(--sp-5);flex-wrap:wrap">
+                <button type="button" class="btn sm">Rotate secret</button>
+                <button type="button" class="btn sm">Send test payload</button>
+              </div>
+            </div>
+            <div class="card-h" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+              <h2 style="font-size:14px">Dead letters</h2>
+              <div class="spacer"></div>
+              <span class="chip dang">2 unresolved</span>
+            </div>
+            <div class="unit">
+              <div class="unit-i" style="background:var(--danger-bg);color:var(--danger-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+              <div class="unit-t"><b class="num">ci_7b31ee0a</b><small>Caller +8801544-6••-••2 matched no lead and the dialled number matched no campaign</small></div>
+              <div class="unit-p"><button type="button" class="btn xs">Replay</button></div>
+            </div>
+            <div class="unit">
+              <div class="unit-i" style="background:var(--danger-bg);color:var(--danger-fg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+              <div class="unit-t"><b class="num">ci_4c98a172</b><small>Malformed payload — <span class="num">analysis.entities.budget_bdt_max</span> was a string, not a number</small></div>
+              <div class="unit-p"><button type="button" class="btn xs">Replay</button></div>
+            </div>
+            <div class="tbl-foot"><span class="hint">Nothing is dropped silently. Failed payloads are held here until a human resolves them.</span></div>
+          </section>
+
+          <section class="card">
+            <div class="card-h"><h2>Users &amp; access</h2><span class="chip ai">Admin only</span></div>
+            <div class="scroll">
+              <table class="tbl">
+                <thead><tr><th>User</th><th>Role</th><th>Can change scoring</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td class="nm">Shahriar Rahman</td><td>Sales Manager</td><td><span class="chip hot">Yes</span></td><td><button type="button" class="btn xs">Manage</button></td></tr>
+                  <tr><td class="nm">Farhana Akter</td><td>Sales Agent</td><td><span class="chip cold">No</span></td><td><button type="button" class="btn xs">Manage</button></td></tr>
+                  <tr><td class="nm">Imran Hossain</td><td>Sales Agent</td><td><span class="chip cold">No</span></td><td><button type="button" class="btn xs">Manage</button></td></tr>
+                  <tr><td class="nm">Sadia Rahman</td><td>Tele-sales</td><td><span class="chip cold">No</span></td><td><button type="button" class="btn xs">Manage</button></td></tr>
+                  <tr><td class="nm">Mahbub Alam</td><td>Sales Agent</td><td><span class="chip cold">No</span></td><td><button type="button" class="btn xs">Manage</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl-foot">
+              <span class="hint">Agents see only their own leads. Only Manager and Admin can edit weights or restore from the Review Queue.</span>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="card">
+        <div class="card-h"><h2>Agent going on leave</h2><div class="spacer"></div><span class="chip">Bulk reassignment</span></div>
+        <div class="card-b">
+          <p style="font-size:13.5px;color:var(--ink-500);line-height:1.7;max-width:80ch">
+            Setting an agent to On Leave removes them from the round-robin immediately but leaves their existing
+            leads in place. Use this to hand the open ones over, with a reason recorded on each lead's timeline so
+            the receiving agent knows why it moved.
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-4);margin-top:var(--sp-5)">
+            <label class="field"><span class="sr">From agent</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="8" r="3.2"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><select><option>Sadia Rahman — 25 leads</option><option>Farhana Akter — 12 leads</option><option>Imran Hossain — 19 leads</option><option>Mahbub Alam — 13 leads</option></select></label>
+            <label class="field"><span class="sr">To agent</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 12h11M11 7l5 5-5 5"/></svg><select><option>Distribute by routing rules</option><option>Mahbub Alam — 8 spare</option><option>Farhana Akter — 8 spare</option><option>Imran Hossain — 6 spare</option></select></label>
+            <label class="field"><span class="sr">Reason</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 5v14M5 12h14"/></svg><input type="text" placeholder="Reason recorded on each lead"></label>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:var(--sp-4);flex-wrap:wrap">
+            <button type="button" class="btn pri">Reassign 25 leads</button>
+            <button type="button" class="btn">Preview distribution</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>
