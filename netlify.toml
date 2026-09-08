@@ -1,0 +1,13 @@
+# Static prototype — no build step, no dependencies.
+# The deliverable lives under the PM pipeline's canonical path.
+[build]
+  publish = ".claude-project/design/html"
+  command = ""
+
+# Client prototype: keep it out of search engines.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
